@@ -20,8 +20,7 @@ a, a:hover { text-decoration: none; }
 input, .form-control, button, .btn, textarea { outline:none; }
 .main_wrapper { float: left;  width:100%;  }
 header.header {
-    float: left;
-    width: 100%;
+
     background: #129ec1;
 	padding:18px 0;
 	background: -webkit-linear-gradient(90deg,#0099cc 0,#663399 100%);
