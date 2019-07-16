@@ -9,6 +9,10 @@ const routes: Routes = [
     loadChildren: '../app/entity-management/entity-management.module#EntityManagementModule'
   },
   {
+    path: 'technical-settings',
+    loadChildren: '../app/technical-settings/technical-settings.module#TechnicalSettingsModule'
+  },
+  {
     path: 'dashboard',
     component: DashboardComponent
   }
