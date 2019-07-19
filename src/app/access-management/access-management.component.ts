@@ -10,6 +10,7 @@ export class AccessManagementComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
