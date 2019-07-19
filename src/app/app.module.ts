@@ -22,6 +22,7 @@ import { AddDataSourceComponent } from './technical-settings/add-data-source/add
     AccessManagementComponent,
     // TechnicalSettingsComponent,
     AddDataSourceComponent
+    
   ],
   imports: [
     BrowserModule,

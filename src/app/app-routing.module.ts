@@ -9,6 +9,10 @@ const routes: Routes = [
     loadChildren: '../app/entity-management/entity-management.module#EntityManagementModule'
   },
   {
+    path: 'access-management',
+    loadChildren: '../app/access-management/access-management.module#AccessManagementModule'
+  },
+  {
     path: 'technical-settings',
     loadChildren: '../app/technical-settings/technical-settings.module#TechnicalSettingsModule'
   },
