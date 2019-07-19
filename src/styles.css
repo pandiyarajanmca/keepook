@@ -46,7 +46,7 @@ header .search-col {
     box-shadow: none;
     color: #fff;
     outline: none;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 500;
 	white-space: nowrap;
 }
@@ -81,7 +81,7 @@ header .search-col {
     color: #fff;
     outline: none;
     width: 80px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
 }
 .drop-col select:focus{ 
@@ -97,7 +97,7 @@ header .search-col {
     margin-right: 6px;
     text-transform: capitalize;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
     float: left;
     margin-top: 5px;
 }
@@ -699,7 +699,7 @@ h1 {
     width: 100%;
 }
 .sidebar h3 {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 25px;
     text-transform: uppercase;
 }
@@ -842,7 +842,7 @@ table.table  td {
     height: 8px;
     border-radius: 50%;
     top: 5px;
-    left: 5px;
+    left: -19px;
 }
 .custom-radio .custom-control-input:checked~.custom-control-label::before {
     background: none;
