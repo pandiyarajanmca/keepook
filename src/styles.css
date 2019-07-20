@@ -58,6 +58,7 @@ header .search-col {
    float: right;
     width: auto;
     max-width: 250px;
+    margin-top: 14px;
 }
 .profile-dropdown .dropdown-menu {
     min-width: 250px;
@@ -83,6 +84,7 @@ header .search-col {
     width: 80px;
     font-size: 14px;
     font-weight: 500;
+    margin-left: 40px;
 }
 .drop-col select:focus{ 
     border: 1px solid #fff; 
@@ -104,6 +106,7 @@ header .search-col {
 .drop-col {
     float: left;
     padding: 0 15px;
+    margin-top: 24px;
 }
 .search-open {
     background: #f6f6f6;
@@ -398,6 +401,7 @@ footer.footer p {
 .title_col {
     text-align: center;
     margin-bottom: 50px;
+    float: left;
 }
 h1 {
 	 font-size: 24px;
@@ -1061,4 +1065,50 @@ table.table .status.active {
     left: inherit;
     right: 12px;
     background: none;
+}
+
+.subm{
+    float: left;
+    margin-left: 23px;
+}
+.subm li{
+    display: inline-block;
+    line-height: 42px;
+    color: #09c;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 6px;
+}
+.subm li a{
+color: #000;
+}
+.create_new_company{
+margin-top: 3rem!important;
+}
+.left-men-u{
+
+}
+.left-men-u ul{
+
+}
+.left-men-u ul li{
+    margin-bottom: 10px;
+    padding: 9px;
+}
+.left-men-u ul li.active{
+    background: #612684;
+}
+.left-men-u ul li.active a{
+    color: #fff;
+}
+.left-men-u ul li a{
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;    
+}
+.left-men-u ul li a span{
+    float: right;
+}
+.left-men-u ul li a i{
+    margin-right: 10px;
 }
