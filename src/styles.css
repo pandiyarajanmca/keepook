@@ -55,7 +55,7 @@ header .search-col {
     border-radius: 50%;
 }
 .profile-dropdown {
-   float: right;
+    float: right;
     width: auto;
     max-width: 250px;
     margin-top: 14px;
@@ -1076,7 +1076,7 @@ table.table .status.active {
     display: inline-block;
     line-height: 42px;
     color: #09c;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 500;
     margin: 0 6px;
 }

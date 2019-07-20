@@ -21,6 +21,10 @@ const routes: Routes = [
     loadChildren: '../app/technical-settings/technical-settings.module#TechnicalSettingsModule'
   },
   {
+    path: 'workflow-management',
+    loadChildren: '../app/workflow-management/workflow-management.module#WorkflowManagementModule'
+  },
+  {
     path: 'dashboard',
     component: DashboardComponent
   }

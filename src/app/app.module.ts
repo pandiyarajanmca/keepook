@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AddDataSourceComponent } from './technical-settings/add-data-source/add-data-source.component';
 import { AccessManagementModule } from './access-management/access-management.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { WorkflowManagementModule } from './workflow-management/workflow-management.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     EntityManagementModule,
     TechnicalSettingsModule,
     AccessManagementModule,
+    WorkflowManagementModule,
     FormsModule, 
     ReactiveFormsModule
   ],
