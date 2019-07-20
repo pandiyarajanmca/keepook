@@ -15,7 +15,7 @@ import { EntityManagementComponent } from './entity-management.component';
     UserGroupComponent,
     OrganizationComponent,
     DepartmentComponent,
-    EntityManagementComponent],
+    EntityManagementComponent],  
   imports: [
     CommonModule,
     EntityRoutingModule,

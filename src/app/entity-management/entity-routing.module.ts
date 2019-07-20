@@ -6,7 +6,7 @@ import { DepartmentComponent } from './department/department.component';
 import { OrganizationComponent } from './organization/organization.component';
 import { EntityManagementComponent } from './entity-management.component';
 const routes: Routes = [
-  { path: ' ', component: EntityManagementComponent},
+  { path: '', component: EntityManagementComponent},
   { path: 'company', component: CompanyComponent},
   { path: 'organization', component: OrganizationComponent},
   { path: 'department', component: DepartmentComponent},
