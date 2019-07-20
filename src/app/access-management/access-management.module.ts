@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AccessRoutingModule } from './access-management-routing.module';
 import { AccessManagementComponent } from './access-management.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +13,9 @@ import { AccessManagementComponent } from './access-management.component';
   ],
   imports: [
     CommonModule,
-    AccessRoutingModule
+    AccessRoutingModule,
+    FormsModule, 
+    ReactiveFormsModule
   ]
 })
 export class AccessManagementModule { }

@@ -5,6 +5,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: DashboardComponent
+  },
+  {
     path: 'entity-management',
     loadChildren: '../app/entity-management/entity-management.module#EntityManagementModule'
   },
@@ -20,6 +24,7 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent
   }
+
 ];
 
 @NgModule({

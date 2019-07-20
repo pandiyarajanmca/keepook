@@ -5,6 +5,8 @@ import { UserGroupComponent } from './user-group/user-group.component';
 import { OrganizationComponent } from './organization/organization.component';
 import { DepartmentComponent } from './department/department.component';
 import { EntityRoutingModule } from './entity-routing.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { EntityManagementComponent } from './entity-management.component';
 
 
 @NgModule({
@@ -12,10 +14,13 @@ import { EntityRoutingModule } from './entity-routing.module';
     CompanyComponent,
     UserGroupComponent,
     OrganizationComponent,
-    DepartmentComponent],
+    DepartmentComponent,
+    EntityManagementComponent],
   imports: [
     CommonModule,
-    EntityRoutingModule
+    EntityRoutingModule,
+    FormsModule, 
+    ReactiveFormsModule
   ]
 })
 export class EntityManagementModule { }

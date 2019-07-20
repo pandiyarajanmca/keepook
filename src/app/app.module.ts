@@ -11,6 +11,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 // import { TechnicalSettingsComponent } from './technical-settings/technical-settings.component';
 import { AddDataSourceComponent } from './technical-settings/add-data-source/add-data-source.component';
+import { AccessManagementModule } from './access-management/access-management.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,10 @@ import { AddDataSourceComponent } from './technical-settings/add-data-source/add
     BrowserModule,
     AppRoutingModule,
     EntityManagementModule,
-    TechnicalSettingsModule
+    TechnicalSettingsModule,
+    AccessManagementModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

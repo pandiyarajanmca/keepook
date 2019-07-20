@@ -11,11 +11,7 @@ import { AddContractPropertiesComponent } from './add-contract-properties/add-co
 
 @NgModule({
   declarations: [
-    // CompanyComponent,
-    // UserGroupComponent,
-    // OrganizationComponent,
-    // DepartmentComponent
-  AddTemplatePropertiesComponent,
+    AddTemplatePropertiesComponent,
     AddContractPropertiesComponent],
   imports: [
     CommonModule,

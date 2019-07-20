@@ -5,12 +5,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: normal;
   font-family: 'Montserrat', sans-serif;
   color:#000;
 }
-p { font-size:16px; line-height:24px;}
+p { font-size:14px; line-height:24px;}
 .container{
     max-width: 1600px; width:96%;
 }
@@ -157,7 +157,7 @@ button.search img {
     border: 1px solid #999;
     color: #000;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
  }
 
 .row-div {
@@ -635,7 +635,7 @@ h1 {
 .global_form .form-group {
     float: left;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 .global_form .object_field .controls_field {
     border: 1px solid #999;
@@ -708,8 +708,8 @@ h1 {
     text-transform: uppercase;
 }
 .right_container h3 {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 15px;
     text-transform: uppercase;
 }
 .emirate_select_field {
@@ -788,7 +788,7 @@ table.table  td {
 .comp_logo_field {
     border-bottom: 1px solid #b8b8b8;
     border-top: 1px solid #b8b8b8;
-    padding: 40px 0 50px;
+    padding: 20px 0 25px;
 }
 .comp_logo_field p {
     font-weight: 500;
@@ -823,15 +823,16 @@ table.table  td {
     margin-top: 2px;
 }
 
-.form-control::-webkit-input-placeholder {  color:#000;   }
-.form-control::-moz-placeholder {  color:#000;  }
-.form-control:-ms-input-placeholder { color:#000;  }
-.form-control:-moz-placeholder {  color:#000;   }
+
+/* .form-control::-webkit-input-placeholder {  color:#cccccc;   }
+.form-control::-moz-placeholder {  color:#cccccc;  }
+.form-control:-ms-input-placeholder { color:#cccccc;  }
+.form-control:-moz-placeholder {  color:#cccccc;   } */
 .create_company_form .name_field .controls_field .form-control {
     width: 100%;
 }
 .global_form .comp_logo_field {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
 }
 .create_organis_form .name_field .form-control, .create_organis_form .bank_name_field .form-control {
     width: 100%;
@@ -1111,4 +1112,65 @@ margin-top: 3rem!important;
 }
 .left-men-u ul li a i{
     margin-right: 10px;
+}
+
+
+.dash-box {
+    padding: 15px 0 0;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.dash-box h3 {
+    color: #ffffff;
+    font-size: 16px;
+}
+.dash-box figure img {
+    max-width: 141px;
+    display: block;
+    margin: 30px auto;
+}
+
+.dash-box.bg-success{
+   background:  #79a341!important;
+}
+.dash-box.bg-warning{
+   background:  #d3ac2b!important;
+}
+.dash-box.bg-danger{
+   background:  #cc4a62!important;
+}
+.dash-box.bg-secondary{
+   background:  #949597!important;
+}
+.dash-box.bg-success a{
+   background:  #5d802e!important;
+}
+.dash-box.bg-warning a{
+   background:  #a8850f!important;
+}
+.dash-box.bg-danger a{
+   background:  #ab2b42!important;
+}
+.dash-box.bg-secondary a{
+   background:  #707271!important;
+}
+
+.dash-link .col{
+    padding: 0;
+}
+.dash-link a{
+  text-decoration: none;
+  color: #ffffff;
+  border-style: solid;
+  border-width: 4px 2px 0;
+  display: block;
+  padding: 10px;
+}
+.dash-link li:first-child a {
+    border-left: 0;
+    border-bottom-left-radius: 5px;
+}
+.dash-link  li:last-child a {
+    border-right: 0;
+    border-bottom-right-radius: 5px;
 }
