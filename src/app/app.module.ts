@@ -14,6 +14,10 @@ import { AddDataSourceComponent } from './technical-settings/add-data-source/add
 import { AccessManagementModule } from './access-management/access-management.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { WorkflowManagementModule } from './workflow-management/workflow-management.module';
+import { ReportingComponent } from './reporting/reporting.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './_serives/auth.module';
+import { AuthService } from './_serives/auth.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { WorkflowManagementModule } from './workflow-management/workflow-managem
     FooterComponent,
     
     // TechnicalSettingsComponent,
-    AddDataSourceComponent
+    AddDataSourceComponent,
+    
+    ReportingComponent,
+    
+    LoginComponent
     
   ],
   imports: [
@@ -36,7 +44,7 @@ import { WorkflowManagementModule } from './workflow-management/workflow-managem
     FormsModule, 
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

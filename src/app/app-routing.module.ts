@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReportingComponent } from './reporting/reporting.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -17,7 +19,7 @@ const routes: Routes = [
     loadChildren: '../app/access-management/access-management.module#AccessManagementModule'
   },
   {
-    path: 'technical-settings',
+    path: 'technical-settings',  
     loadChildren: '../app/technical-settings/technical-settings.module#TechnicalSettingsModule'
   },
   {
@@ -25,8 +27,16 @@ const routes: Routes = [
     loadChildren: '../app/workflow-management/workflow-management.module#WorkflowManagementModule'
   },
   {
+    path: 'reporting',
+    component: ReportingComponent
+  },
+  {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 
 ];

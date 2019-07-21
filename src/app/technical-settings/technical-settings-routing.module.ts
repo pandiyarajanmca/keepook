@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-// import { CompanyComponent } from './company/company.component';
-// import { UserGroupComponent } from './user-group/user-group.component';
-// import { DepartmentComponent } from './department/department.component';
-// import { OrganizationComponent } from './organization/organization.component';
+import { TechnicalSettingsComponent } from './technical-settings.component';
+import { AddContractPropertiesComponent } from './add-contract-properties/add-contract-properties.component';
+import { AddDataSourceComponent } from './add-data-source/add-data-source.component';
+import { AddTemplatePropertiesComponent } from './add-template-properties/add-template-properties.component';
 const routes: Routes = [
-  // { path: ' ', component: CompanyComponent},
-  // { path: 'company', component: CompanyComponent},
-  // { path: 'organization', component: OrganizationComponent},
-  // { path: 'department', component: DepartmentComponent},
-  // { path: 'user-groups', component: UserGroupComponent}
+  { path: '', component: TechnicalSettingsComponent},
+  { path: 'add-contract-properties', component: AddContractPropertiesComponent },
+  { path: 'add-data-source', component: AddDataSourceComponent},
+  { path: 'add-template-properties', component: AddTemplatePropertiesComponent},  
 ];
 
 @NgModule({
