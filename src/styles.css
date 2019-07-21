@@ -1081,30 +1081,43 @@ color: #000;
 .create_new_company{
 margin-top: 3rem!important;
 }
-.left-men-u{
 
+.left-men-u img{
+  width: 30px;
+  margin-right: 10px;
 }
-.left-men-u ul{
 
+.left-men-u .card-header{
+  padding: 0;
 }
+
+.left-men-u .card-header a{
+  display: block;
+}
+
 .left-men-u ul li{
     margin-bottom: 10px;
     padding: 9px;
 }
-.left-men-u ul li.active{
+
+.left-men-u .card-header  a:not(.collapsed){
     background: #612684;
 }
+
 .left-men-u ul li.active a{
     color: #fff;
 }
+
 .left-men-u ul li a{
     color: #000;
     font-weight: 600;
     font-size: 15px;    
 }
+
 .left-men-u ul li a span{
     float: right;
 }
+
 .left-men-u ul li a i{
     margin-right: 10px;
 }
