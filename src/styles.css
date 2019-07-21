@@ -1212,3 +1212,8 @@ margin-top: 3rem!important;
      width: 50%;
      right: 0;
  }
+
+ .in-container{
+    text-align: center;
+    width: 300px;
+ }
