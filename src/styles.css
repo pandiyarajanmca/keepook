@@ -1176,6 +1176,9 @@ margin-top: 3rem!important;
     position: fixed;
     height: 100%;
     width: 100%;
+    background-size: cover;
+    left: 0;
+    right: 0;
 }
 
   
@@ -1206,14 +1209,109 @@ margin-top: 3rem!important;
   }
   
  .login-form{
-     background: rgba(0, 124, 255, 0.61);
-     height: 100%;
-     position: fixed;
-     width: 50%;
-     right: 0;
+    background: #1784afe0;
+    height: 100%;
+    position: fixed;
+    width: 50%;
+    right: 0;
+    padding-top:7%;
  }
 
  .in-container{
     text-align: center;
     width: 300px;
+    
+    margin-top: 32px !important;
+ }
+ .imgcontainer1{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 88px;
+ }
+ 
+
+.imgcontainer1 img{
+    max-width: 59%;
+    left: 0;
+    position: absolute;
+}
+ .left-form{
+    float: left;
+    width: 100%;
+    background: #fff;
+    background: #341f7fab;
+    height: 100%;
+    position: fixed;
+    width: 50%;
+    left: 0;
+ }
+ .lo-for{
+    float: left;
+    width: 100%;
+ }
+ .lo-for label{
+    text-align: left;
+    color: #fff;
+    float: left;
+ }
+ 
+ .lo-for .checks{
+    margin-top: 2px;
+ }
+ .lo-for .psws{
+    color: #fff;
+    float: right;
+ }
+ .left-form ul{
+    text-align: center;
+    width: 300px;
+    /* height: 300px; */
+    margin: auto;
+    /* margin-left: 38%; */
+    margin-top: 19%;
+ }
+ .left-form ul li{
+    float: left;
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 15px;
+ }
+ .left-form ul li i{
+
+    margin-right: 14px;
+ }
+ .sam-bot{
+    float: left;
+    width: 100%;
+    padding-right: 28%;
+    color: #fff;
+    text-align: center;
+    margin-top: 12px;
+ }
+ .sam-bot i{
+    margin-right: 15px;
+    border: solid 2px #fff;
+    font-size: 28px;
+    border-radius: 26px;
+    padding: 8px;
+ }
+ .log-bt {
+    float: left;
+    border-top-left-radius: 21px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px 20px !important;
+}
+ .log-bt i{
+    background: #fff;
+    color: #000;
+    border-radius: 100%;
+    padding: 3px;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 12px;
  }

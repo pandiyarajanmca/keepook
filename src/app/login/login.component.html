@@ -1,39 +1,51 @@
 <div class="page-login">
     <div class="row">
         <div class="col-6">
-
+<div class="left-form">
+    <ul >
+        <li><i class="fa fa-check"></i>Digitize Contracts End to End</li>
+        <li><i class="fa fa-check"></i>Sample Content1</li>
+        <li><i class="fa fa-check"></i>Sample Content1</li>
+        <li><i class="fa fa-check"></i>Sample Content1</li>
+        <li><i class="fa fa-check"></i>Sample Content1</li>
+        <li><i class="fa fa-check"></i>And Much More</li>
+    </ul>
+    <a href="#" class="sam-bot"><i class="fa fa-play"></i>Watch Video</a>
+</div>
         </div>
         <div class="col-6">
             <form class="login-form " [formGroup]="form" (ngSubmit)="onSubmit()">
                 <div class="in-container  m-auto">
 
-                    <div class="imgcontainer">
+                    <div class="imgcontainer imgcontainer1">
                         <img src="assets/images/logo.png" alt="Avatar" class="avatar">
                     </div>
 
                     <div class="form-section">
                         <div class="form-group">
-                            <label for="uname"><b>Username</b></label>
                             <input type="text" formControlName="userName" class="form-control"
-                                placeholder="Enter Username" name="uname" required>
+                                placeholder="Username" name="uname" required>
 
                         </div>
                         <div class="form-group">
-                            <label for="psw"><b>Password</b></label>
                             <input type="password" formControlName="password" class="form-control"
-                                placeholder="Enter Password" name="psw" required>
+                                placeholder="Password" name="psw" required>
 
                         </div>
-                        <div class="form-group">
-                            <button type="submit">Login</button>
-                            <label>
-                                <input type="checkbox" checked="checked" name="remember"> Remember me
-                            </label>
+                        <div class="lo-for">
+                                <label>
+                                        <input type="checkbox" class="checks" checked="checked" name="remember"> Remember me
+                                    </label>
+                                        <div class="psws">Forgot <a href="#">password?</a></div>
                         </div>
+                       
+                            
+                        
                     </div>
 
                     <div>
-                        <span class="psw">Forgot <a href="#">password?</a></span>
+                            <button type="submit" class="log-bt"><i class="fa fa-check"></i>Login</button>
+                       
                     </div>
 
                 </div>
