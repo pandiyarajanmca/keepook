@@ -7,6 +7,7 @@ import { DepartmentComponent } from './department/department.component';
 import { EntityRoutingModule } from './entity-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EntityManagementComponent } from './entity-management.component';
+import { EntitySidebarComponent } from './entity-sidebar/entity-sidebar.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { EntityManagementComponent } from './entity-management.component';
     UserGroupComponent,
     OrganizationComponent,
     DepartmentComponent,
-    EntityManagementComponent],  
+    EntityManagementComponent,
+    EntitySidebarComponent],  
   imports: [
     CommonModule,
     EntityRoutingModule,
