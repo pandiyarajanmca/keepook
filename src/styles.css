@@ -1420,9 +1420,26 @@ table.table .status.active {
   margin-right: 10px;
 }
 
+
+.left-men-u li img{
+    width: 18px;
+}
+
+.left-men-u li a:not(.active) img:last-child{
+    display: none;
+}
+.left-men-u li a.active img:first-child{
+    display: none;
+}
+
 .left-men-u .card {
   border: none;
   border-radius: 0;
+}
+
+.left-men-u .nav-pills .nav-link.active{
+    background: transparent;
+    color: #612684;
 }
 
 .left-men-u .card-header {
@@ -1484,9 +1501,9 @@ table.table .status.active {
 }
 
 .left-men-u ul li a {
-  color: #000;
-  font-weight: 600;
-  font-size: 15px;
+    color: #000;
+    font-size: 14px;
+    padding: 11px 6px;
 }
 
 .left-men-u ul li a span {
@@ -1558,8 +1575,20 @@ table.table .status.active {
   border-width: 4px 2px 0;
   display: block;
   padding: 10px;
+  line-height: 22px;
 }
 
+.dash-link a:hover {
+    opacity: 0.6;
+}
+
+.dash-link a img {
+  width: 13px;
+  line-height: 10px;
+  display: inline-block;
+  margin-right: 3px;
+  margin-top: -3px;
+}
 .dash-link li:first-child a {
   border-left: 0;
   border-bottom-left-radius: 5px;
