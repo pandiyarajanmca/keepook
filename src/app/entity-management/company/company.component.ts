@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { forkJoin } from 'rxjs';
 
+
 @Component({
   selector: 'app-company',
   templateUrl: './company.component.html',

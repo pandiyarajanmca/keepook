@@ -1663,7 +1663,7 @@ table.table .status.active {
   float: left;
   width: 100%;
   background: #fff;
-  background: #341f7fab;
+  background: rgba(52,31,127,0.61);
   height: 100%;
   position: fixed;
   width: 50%;
@@ -1744,4 +1744,43 @@ table.table .status.active {
   font-weight: bold;
   margin-right: 10px;
   font-size: 12px;
+}
+
+
+/* work-flow */
+
+.work-box-bg{
+    background: url(assets/images/workflow-bg.jpg) no-repeat center;
+    background-size: cover;
+    height: 70%;
+    min-height: 360px;
+    position: relative;
+}
+.work-box-bg img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    right: 0;
+    bottom: 0;
+    max-width: 80px;
+    margin: auto;
+}
+
+.work-box-bg div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    right: 0;
+    bottom: 0;
+    background:rgba(52,31,127,0.61);
+}
+
+.work-box-bg a{
+    cursor: pointer;
+}
+.work-box-form{
+    background: #f5f5f5;
+    min-height: 360px;
 }
