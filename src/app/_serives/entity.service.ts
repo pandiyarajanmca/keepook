@@ -18,7 +18,7 @@ export class EntityService {
 		private router: Router
 	) {
 		this.env = environment;
-		this.entityPath = this.env.priceManagerBaseUrl;
+		this.entityPath = this.env.entityPath;
 	}
 	env: any;
 	entityPath: string;

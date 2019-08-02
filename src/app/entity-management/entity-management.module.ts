@@ -12,6 +12,8 @@ import { EditCompanyComponent } from './company/edit-company/edit-company.compon
 import { ViewCompanyComponent } from './company/view-company/view-company.component';
 import { AgmCoreModule } from '@agm/core';
 import { EntityService } from '../_serives/entity.service';
+import { AngularFileUploaderModule } from "angular-file-uploader";
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { EntityService } from '../_serives/entity.service';
     EntityRoutingModule,
     FormsModule, 
     ReactiveFormsModule,
+    AngularFileUploaderModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDcZQDtoNuwSwbS6NVdlTmMo904rzKSbR4'
     })

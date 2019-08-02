@@ -63,12 +63,19 @@
 									<h3>Company Logo</h3>
 									<p>Select an image file on your computer (4MB max)</p>
 									<div class="browse_file">
+											<!-- <angular-file-uploader #fileUpload1
+											[config]="afuConfig"
+											[resetUpload]="true"
+											(ApiResponse)="DocUpload($event)">
+									  </angular-file-uploader> -->
 										<div class="custom-file">
+											
+									  
 											<input type="file" required class="custom-file-input" formControlName="logo"
 												name="logo">
 											<label class="custom-file-label" for="customFile">
 												<img src="assets/images/browse_file.png" alt="">
-											</label>
+											</label> 
 											<small *ngIf="submitted && fConrols.logo?.errors" class="text-danger">
 												<div *ngIf="fConrols.logo?.errors?.required">&#x26A0; Company logo is
 													required</div>
@@ -108,7 +115,7 @@
 										<label class="label_field">Country</label>	
 										<div class="controls_field">
 												<select class="form-control" formConrolName="country" name="country">
-													<option>United Arab Emirates</option>
+													<option value="UAE">United Arab Emirates</option>
 												</select>
 												<small *ngIf="submitted && fConrols.country?.errors" class="text-danger">
 													<div *ngIf="fConrols.country?.errors?.required">&#x26A0;Please select the country

@@ -33,7 +33,9 @@ export class HttpService {
     if (headers) {
       opts = this.setHeaders(opts["headers"], headers);
     }
-
+  
+    console.log('opy', opts);
+    
     return this.http.post(url, data, opts).catch((err) => {
       return this.handleError(err)
     });
@@ -95,8 +97,10 @@ export class HttpService {
     }
     options = options.set('content-type', "application/json");
     const userToken = sessionStorage.getItem('token') ? JSON.parse(sessionStorage.getItem('token')): null;
+    console.log(userToken);
+    
     if(userToken){
-      options = options.set('Authorization', +'Bearer'+ ' ' +userToken.jwtToken);
+      options = options.set('Authorization',  'Bearer' + ' ' + userToken);
     }
     
     return options;
