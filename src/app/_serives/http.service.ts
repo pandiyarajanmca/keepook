@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class HttpService {
-
+  
   constructor(
     private http: HttpClient,
     private router: Router
@@ -96,7 +96,7 @@ export class HttpService {
     options = options.set('content-type', "application/json");
     const userToken = sessionStorage.getItem('token') ? JSON.parse(sessionStorage.getItem('token')): null;
     if(userToken){
-      options = options.set('x-access-token',userToken.jwtToken);
+      options = options.set('Authorization', +'Bearer'+ ' ' +userToken.jwtToken);
     }
     
     return options;
