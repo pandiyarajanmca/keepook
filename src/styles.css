@@ -1471,7 +1471,7 @@ table.table .status.active {
 }
 
 .left-men-u .card-header a span {
-  /* float: right; */
+  float: right;
   display: inline-block;
   line-height: 28px;
   font-size: 18px;
