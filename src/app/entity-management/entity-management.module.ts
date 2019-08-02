@@ -8,7 +8,10 @@ import { EntityRoutingModule } from './entity-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EntityManagementComponent } from './entity-management.component';
 import { EntitySidebarComponent } from './entity-sidebar/entity-sidebar.component';
-
+import { EditCompanyComponent } from './company/edit-company/edit-company.component';
+import { ViewCompanyComponent } from './company/view-company/view-company.component';
+import { AgmCoreModule } from '@agm/core';
+import { EntityService } from '../_serives/entity.service';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,21 @@ import { EntitySidebarComponent } from './entity-sidebar/entity-sidebar.componen
     OrganizationComponent,
     DepartmentComponent,
     EntityManagementComponent,
-    EntitySidebarComponent],  
+    EntitySidebarComponent,
+    EditCompanyComponent,
+    ViewCompanyComponent,
+    ],  
   imports: [
     CommonModule,
     EntityRoutingModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDcZQDtoNuwSwbS6NVdlTmMo904rzKSbR4'
+    })
+  ],
+  providers:[
+    EntityService
   ]
 })
 export class EntityManagementModule { }

@@ -1,113 +1,116 @@
-// import { Injectable } from '@angular/core';
-// import { Router } from '@angular/router';
-// import { HttpClient, HttpErrorResponse, HttpHeaders, HttpResponse } from '@angular/common/http';
-// import { Observable, EMPTY, throwError } from 'rxjs';
-// import { catchError } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpResponse } from '@angular/common/http';
+import {throwError} from 'rxjs';
+import {Observable} from 'rxjs/Rx';
+import 'rxjs/add/operator/catch';
 
-  
-// @Injectable()
-// export class HttpService {
 
-//   constructor(
-//     private http: HttpClient,
-//     private router: Router
-//   ) {}
+@Injectable()
+export class HttpService {
 
-//   downloadPost(url: string, data: any, options: any, headers?: any) {
-//     let opts:Object = {}
-//     opts["responseType"] = 'arraybuffer'
-//     if (headers) {
-//       opts = this.setHeaders(opts["headers"], headers);
-//     }
-//     return this.http.post(url, data, opts).catch((err) => {
-//       return this.handleError(err)
-//     });
-//   }   
+  constructor(
+    private http: HttpClient,
+    private router: Router
+  ) {}
 
-//   post(url: string, data: any, options: any, headers?: any) {
-//     let opts:Object = {}
-//     opts["headers"] = this.getRequestOptionArgs(options);
+  downloadPost(url: string, data: any, options: any, headers?: any) {
+    let opts:Object = {}
+    opts["responseType"] = 'arraybuffer'
+    if (headers) {
+      opts = this.setHeaders(opts["headers"], headers);
+    }
 
-//     if (headers) {
-//       opts = this.setHeaders(opts["headers"], headers);
-//     }
+    return this.http.post(url, data, opts).catch((err) => {
+      return this.handleError(err)
+    });
+  }
 
-//     return this.http.post(url, data, opts).catch((err) => {
-//       return this.handleError(err)
-//     });
-//   }
+  post(url: string, data: any, options: any, headers?: any) {
+    let opts:Object = {}
+    opts["headers"] = this.getRequestOptionArgs(options);
+    
+    if (headers) {
+      opts = this.setHeaders(opts["headers"], headers);
+    }
 
-//   put(url: string, data: any, options: any, headers?: any) {
-//     let opts:Object = {}
-//     opts["headers"] = this.getRequestOptionArgs(options);
+    return this.http.post(url, data, opts).catch((err) => {
+      return this.handleError(err)
+    });
+  }
 
-//     if (headers) {
-//       opts = this.setHeaders(opts, headers);
-//     }
+  put(url: string, data: any, options: any, headers?: any) {
+    let opts:Object = {}
+    opts["headers"] = this.getRequestOptionArgs(options);
 
-//     return this.http.put(url, data, opts).catch((err) => {
-//       return this.handleError(err)
-//     });
-//   }
+    if (headers) {
+      opts = this.setHeaders(opts, headers);
+    }
 
-//   get(url: string, options?: any, headers?: any) {
-//     let opts:Object = {}
+    return this.http.put(url, data, opts).catch((err) => {
+      return this.handleError(err)
+    });
+  }
 
-//     opts["headers"] = this.getRequestOptionArgs(options);
+  get(url: string, options?: any, headers?: any) {
+    let opts:Object = {}
 
-//     if (headers) {
-//       opts = this.setHeaders(opts, headers);
-//     }
+    opts["headers"] = this.getRequestOptionArgs(options);
 
-//     return this.http.get(url, opts).catch((err) => {
-//       return this.handleError(err)
-//     });
-//   }
+    if (headers) {
+      opts = this.setHeaders(opts, headers);
+    }
 
-//   delete(url: string, options: any)  {
-//     return this.http.delete(url, {"headers":this.getRequestOptionArgs(options)});
-//   }
+    return this.http.get(url, opts).catch((err) => {
+      return this.handleError(err)
+    });
+  }
 
-//   setHeaders(options: any, headers: any) {
-//     if (!options || typeof headers !== 'object') {
-//       return options;
-//     }
+  delete(url: string, options: any)  {
+    return this.http.delete(url, {"headers":this.getRequestOptionArgs(options)});
+  }
 
-//     for (const key in headers) {
-//       if (headers.hasOwnProperty(key)) {
-//         if (options["headers"].has(key)) {
-//           options["headers"] = options["headers"].delete(key);
-//         } else{
-//           options["headers"] = options["headers"].set(key, headers[key]);
-//         }
-//       }
-//     }
+  setHeaders(options: any, headers: any) {
+    if (!options || typeof headers !== 'object') {
+      return options;
+    }
 
-//     return options;
-//   }
+    for (const key in headers) {
+      if (headers.hasOwnProperty(key)) {
+        if (options["headers"].has(key)) {
+          options["headers"] = options["headers"].delete(key);
+        } else{
+          options["headers"] = options["headers"].set(key, headers[key]);
+        }
+      }
+    }
 
-//   private getRequestOptionArgs(options?: HttpHeaders) {
+    return options;
+  }
 
-//     if (options == null) {
-//       options = new HttpHeaders();
-//     }
-//     options = options.set('content-type', "application/json");
-//     const userToken = sessionStorage.getItem('token') ? JSON.parse(sessionStorage.getItem('token')): null;
-//     if(userToken){
-//       options = options.set('x-access-token',userToken.jwtToken);
-//     }
-//     return options;
-//   }
+  private getRequestOptionArgs(options?: HttpHeaders) {
 
-//   //TODO catch error with handleError in each rest api call
+    if (options == null) {
+      options = new HttpHeaders();
+    }
+    options = options.set('content-type', "application/json");
+    const userToken = sessionStorage.getItem('token') ? JSON.parse(sessionStorage.getItem('token')): null;
+    if(userToken){
+      options = options.set('x-access-token',userToken.jwtToken);
+    }
+    
+    return options;
+  }
 
-//   public handleError(error) {
-//     // check if user session is expired
-//     if ( error.status === 401 || error.status === 403) {
-//       sessionStorage.clear();
-//       return  this.router.navigate(['/login']);
-//     }
-//     return throwError(error);
-//   }
+  //TODO catch error with handleError in each rest api call
 
-// }
+  public handleError(error) {
+    // check if user session is expired
+    if ( error.status === 401 || error.status === 403) {
+      sessionStorage.clear();
+      return  this.router.navigate(['/login']);
+    }
+    return throwError(error);
+  }
+
+}

@@ -248,21 +248,25 @@ input {
 }
 
 .user-bx figure {
-  width: 230px;
-  height: 230px;
+  width: 180px;
+  height: 180px;
   border-radius: 100%;
   text-align: center;
   align-items: center;
   justify-content: center;
   display: flex;
-  margin: 0 0 35px;
   box-shadow: 0 6px 4px #ddd;
+  margin: 15px auto;
 }
 
 .user-bx h3 {
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.user-bx img {
+  max-width: 105px;
 }
 
 .user-feature-row {
@@ -636,7 +640,8 @@ h1 {
 .data_title {
   background: #0099cc;
   float: left;
-  padding: 15px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .data_title h3 {
@@ -1420,15 +1425,16 @@ table.table .status.active {
 }
 
 
-.left-men-u li img{
-    width: 18px;
+.left-men-u li img {
+  width: 18px;
 }
 
-.left-men-u li a:not(.active) img:last-child{
-    display: none;
+.left-men-u li a:not(.active) img:last-child {
+  display: none;
 }
-.left-men-u li a.active img:first-child{
-    display: none;
+
+.left-men-u li a.active img:first-child {
+  display: none;
 }
 
 .left-men-u .card {
@@ -1436,9 +1442,9 @@ table.table .status.active {
   border-radius: 0;
 }
 
-.left-men-u .nav-pills .nav-link.active{
-    background: transparent;
-    color: #612684;
+.left-men-u .nav-pills .nav-link.active {
+  background: transparent;
+  color: #612684;
 }
 
 .left-men-u .card-header {
@@ -1448,7 +1454,7 @@ table.table .status.active {
   border-radius: 0;
 }
 
-.left-men-u .card-header:first-child{
+.left-men-u .card-header:first-child {
   border-top: solid 1px #ddd;
 }
 
@@ -1460,9 +1466,9 @@ table.table .status.active {
   border-radius: 0;
 }
 
-.left-men-u .card-header  a:not(.collapsed) .fa::before{
-    content: "\f110";
-  }
+.left-men-u .card-header a:not(.collapsed) .fa::before {
+  content: "\f110";
+}
 
 .left-men-u .card-header a span {
   /* float: right; */
@@ -1497,9 +1503,9 @@ table.table .status.active {
 }
 
 .left-men-u ul li a {
-    color: #000;
-    font-size: 14px;
-    padding: 11px 6px;
+  color: #000;
+  font-size: 14px;
+  padding: 11px 6px;
 }
 
 .left-men-u ul li a span {
@@ -1584,6 +1590,7 @@ table.table .status.active {
   margin-right: 3px;
   margin-top: -3px;
 }
+
 .dash-link li:first-child a {
   border-left: 0;
   border-bottom-left-radius: 5px;
@@ -1663,7 +1670,7 @@ table.table .status.active {
   float: left;
   width: 100%;
   background: #fff;
-  background: rgba(52,31,127,0.61);
+  background: rgba(52, 31, 127, 0.61);
   height: 100%;
   position: fixed;
   width: 50%;
@@ -1749,38 +1756,40 @@ table.table .status.active {
 
 /* work-flow */
 
-.work-box-bg{
-    background: url(assets/images/workflow-bg.jpg) no-repeat center;
-    background-size: cover;
-    height: 70%;
-    min-height: 360px;
-    position: relative;
-}
-.work-box-bg img{
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: inline-block;
-    right: 0;
-    bottom: 0;
-    max-width: 80px;
-    margin: auto;
+.work-box-bg {
+  background: url(assets/images/workflow-bg.jpg) no-repeat center;
+  background-size: cover;
+  height: 70%;
+  min-height: 360px;
+  position: relative;
 }
 
-.work-box-bg div{
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    right: 0;
-    bottom: 0;
-    background:rgba(52,31,127,0.61);
+.work-box-bg img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  max-width: 80px;
+  margin: auto;
 }
 
-.work-box-bg a{
-    cursor: pointer;
+.work-box-bg div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  right: 0;
+  bottom: 0;
+  background: rgba(52, 31, 127, 0.61);
 }
-.work-box-form{
-    background: #f5f5f5;
-    min-height: 360px;
+
+.work-box-bg a {
+  cursor: pointer;
+}
+
+.work-box-form {
+  background: #f5f5f5;
+  min-height: 360px;
 }

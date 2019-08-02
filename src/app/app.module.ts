@@ -5,28 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { EntityManagementModule } from './entity-management/entity-management.module';
 import { TechnicalSettingsModule } from './technical-settings/technical-settings.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component'
-
-import { HeaderComponent } from './header/header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
-// import { TechnicalSettingsComponent } from './technical-settings/technical-settings.component';
 import { AccessManagementModule } from './access-management/access-management.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { WorkflowManagementModule } from './workflow-management/workflow-management.module';
 import { ReportingComponent } from './reporting/reporting.component';
 import { LoginComponent } from './login/login.component';
-import { AuthGuard } from './_serives/auth.module';
 import { AuthService } from './_serives/auth.service';
-
+import { ChartComponent } from './dashboard/chart/chart.component';
+import { CommonModulesModule } from './common-module/common-module';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpService} from './_serives/http.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeaderComponent,
     FooterComponent,
     ReportingComponent,    
-    LoginComponent    
+    LoginComponent,
+    ChartComponent    
   ],
   imports: [
     BrowserModule,
@@ -36,9 +37,13 @@ import { AuthService } from './_serives/auth.service';
     AccessManagementModule,
     WorkflowManagementModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModulesModule,
+    HttpClientModule,  
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({ positionClass: 'toast-bottom-right' }),
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

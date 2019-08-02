@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { forkJoin } from 'rxjs';
+import { forkJoin, from } from 'rxjs';
+import { EntityService} from '../../_serives/entity.service';
 
 
 @Component({
@@ -15,22 +16,21 @@ export class CompanyComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
+    private entityService :EntityService
   ) { }
-  vodafoneMarkets: Array<any> = [];
-  CompanyIdExistError: boolean = false;
+
+
+ 
 
   ngOnInit() {
     this.createCompanyForm = this.formBuilder.group({
       companyName: ['', Validators.required],
-      location: ['', Validators.required],
-      location1: ['', Validators.required],
+      website: ['', Validators.required],
       logo: ['', Validators.required],
-      companyAddress: ['', Validators.required],
-      // position: ['', Validators.required],
+      address: ['', Validators.required],
       city: ['', Validators.required],
-      state: ['', Validators.required],
       zipcode: ['', Validators.required],
-      // country: [''],
+      country: [''],
       phoneNumber: ['', Validators.required],      
       contactPerson: ['', Validators.required],
     });
@@ -47,12 +47,20 @@ export class CompanyComponent implements OnInit {
   createCompanySubmit() {
     this.submitted = true;
    
-    console.log(this.createCompanyForm.controls);
+    console.log(this.createCompanyForm.controls.value);
     console.log(this.createCompanyForm.invalid);
 
     // stop here if form is invalid
     if (this.createCompanyForm.invalid) {
         return;
+    }
+
+    else {
+      this.entityService.saveNewCompany(this.createCompanyForm.value).subscribe(res=>{
+          console.log(res);
+      },err => {
+        console.log(err);
+      })
     }
 
     // display form values on success

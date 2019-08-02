@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  userServiceBaseUrl: 'http://23.96.4.235:9094/api/auth/',
+ 
+  entityPath: "http://23.96.4.235:9094/api/entity/",
+  OAUTH_CLIENT_SECRET: "1234",
 };
 
 /*

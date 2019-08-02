@@ -46,34 +46,18 @@
 									</div>
 
 								</div>
-								<div class="form-group location_field form-group2">
-									<label class="label_field">Location</label>
+								<div class="form-group name_field">
+									<label class="label_field">Website</label>
 									<div class="controls_field">
-										<div class="form-group lavel_1">
-											<select class="form-control" required formControlName="location"
-												name="location">
-												<option value="0">United Arab Emirates</option>
-											</select>
-											<small *ngIf="submitted && fConrols.location?.errors" class="text-danger">
-												<div *ngIf="fConrols.location?.errors?.required">&#x26A0; Company name
-													is
-													required</div>
-											</small>
-										</div>
-										<div class="form-group lavel_2">
-											<select class="form-control" required formControlName="location1"
-												name="location1">
-												<option value="0">Emirates NBD Group Company</option>
-											</select>
-											<small *ngIf="submitted && fConrols.location1?.errors" class="text-danger">
-												<div *ngIf="fConrols.location1?.errors?.required">&#x26A0; Company name
-													is
-													required</div>
-											</small>
-										</div>
-
+										<input type="text" class="form-control" required name="website"
+											formControlName="website" placeholder="Enter the website URL">
+										<small *ngIf="submitted && fConrols.website?.errors" class="text-danger">
+											<div *ngIf="fConrols.website?.errors?.required">&#x26A0; Website URL invalid</div>
+										</small>
 									</div>
+
 								</div>
+						
 
 								<div class="form-group comp_logo_field">
 									<h3>Company Logo</h3>
@@ -98,11 +82,11 @@
 									<div class="form-group adrs_field">
 										<label for="" class="label_field">Company Address</label>
 										<div class="controls_field">
-											<textarea class="form-control" formControlName="companyAddress"
+											<textarea class="form-control" formControlName="address"
 												placeholder="Enter the company address"></textarea>
-											<small *ngIf="submitted && fConrols.companyAddress?.errors"
+											<small *ngIf="submitted && fConrols.address?.errors"
 												class="text-danger">
-												<div *ngIf="fConrols.companyAddress?.errors?.required">&#x26A0; Company
+												<div *ngIf="fConrols.address?.errors?.required">&#x26A0; Company
 													Address is required</div>
 											</small>
 										</div>
@@ -119,16 +103,17 @@
 											</small>
 										</div>
 									</div>
+
 									<div class="form-group state_field">
-										<label for="" class="label_field">State</label>
+										<label class="label_field">Country</label>	
 										<div class="controls_field">
-											<input type="text" formControlName="state" name="state" class="form-control"
-												placeholder="Enter the state name">
-											<small *ngIf="submitted && fConrols.state?.errors" class="text-danger">
-												<div *ngIf="fConrols.state?.errors?.required">&#x26A0;State name is
-													required
-												</div>
-											</small>
+												<select class="form-control" formConrolName="country" name="country">
+													<option>United Arab Emirates</option>
+												</select>
+												<small *ngIf="submitted && fConrols.country?.errors" class="text-danger">
+													<div *ngIf="fConrols.country?.errors?.required">&#x26A0;Please select the country
+													</div>
+												</small>
 										</div>
 									</div>
 									<div class="form-group zipcode_field">
