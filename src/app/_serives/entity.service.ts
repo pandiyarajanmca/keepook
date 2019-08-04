@@ -33,15 +33,22 @@ export class EntityService {
 			.map((res) => res);
 	}
 
-	editCompany(data: any, headers?: any) {
-		return this.httpservice
-			.put(this.entityPath + 'agreement', data, null, headers)
+	editCompany(data: any, id: any, headers?: any) {  
+        console.log(id);
+        return this.httpservice
+			.put(this.entityPath + 'company/'+ id, data, null, headers)
 			.map((res) => res);
 	}
 
-	getSavedContract(id) {
+	getAllCompany() {
 		return this.httpservice
-			.get(this.entityPath + 'agreement/' + id)
+			.get(this.entityPath + 'company')
+			.map((res) => res);
+    }
+    
+	getCompanyByID(id) {
+		return this.httpservice
+			.get(this.entityPath + 'company/' + id)
 			.map((res) => res);
 	}
 

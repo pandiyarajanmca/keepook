@@ -10,9 +10,9 @@ import { EntityManagementComponent } from './entity-management.component';
 import { EntitySidebarComponent } from './entity-sidebar/entity-sidebar.component';
 import { EditCompanyComponent } from './company/edit-company/edit-company.component';
 import { ViewCompanyComponent } from './company/view-company/view-company.component';
-import { AgmCoreModule } from '@agm/core';
 import { EntityService } from '../_serives/entity.service';
 import { AngularFileUploaderModule } from "angular-file-uploader";
+import { CommonModulesModule } from '../common-module/common-module';
 
 
 @NgModule({
@@ -27,14 +27,12 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
     ViewCompanyComponent,
     ],  
   imports: [
-    CommonModule,
+    CommonModule,    
+    CommonModulesModule,
     EntityRoutingModule,
     FormsModule, 
     ReactiveFormsModule,
-    AngularFileUploaderModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDcZQDtoNuwSwbS6NVdlTmMo904rzKSbR4'
-    })
+    AngularFileUploaderModule, 
   ],
   providers:[
     EntityService

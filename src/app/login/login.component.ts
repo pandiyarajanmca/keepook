@@ -3,7 +3,6 @@ import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 import { ToastrService } from "ngx-toastr";
 import { AuthService } from "../_serives/auth.service";
 import { Router } from '@angular/router';
-import { environment } from '../../environments/environment'
 
 @Component({
   selector: 'app-login',
@@ -14,7 +13,7 @@ export class LoginComponent implements OnInit {
   @ViewChild("spinnerLoad", { static: false }) spinnerLoad;
 	loginForm: FormGroup;
 	submit: boolean = false;
-	environment: any = environment;
+	incorrectErr: boolean = false;
 	constructor(
 		private formBuilder: FormBuilder,
 		public toastrService: ToastrService,
@@ -27,17 +26,26 @@ export class LoginComponent implements OnInit {
 			usernameOrEmail: ["", Validators.required],
 			password: ["", Validators.required]
 		});
+		setTimeout(() => {
+			/** spinner ends after 5 seconds */
+			this.spinnerLoad.spinnerHide();
+		  }, 2000);
 	}
 	login(data) {
 		this.submit = true;
-		// this.spinnerLoad.spinnerShow();
+		this.spinnerLoad.spinnerShow();
 		this.authService.login(data)
-		.subscribe(res => {
+		.subscribe(res => {				
 			this.submit = false;
 			this.spinnerLoad.spinnerHide();
 			this.router.navigate(['/dashboard'])
 		}, err => {
+			this.incorrectErr=true;
+			
 			this.spinnerLoad.spinnerHide();
+			setTimeout(()=>{
+				this.incorrectErr=false;
+			},5000);
 			this.toastrService.error("Incorrect Username or Password!");
 			this.submit = false;
 			this.spinnerLoad.spinnerHide();

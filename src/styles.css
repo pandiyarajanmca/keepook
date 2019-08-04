@@ -129,7 +129,6 @@ header .search-col {
   width: 80px;
   font-size: 14px;
   font-weight: 500;
-  margin-left: 30px;
 }
 
 .drop-col select:focus {
@@ -645,7 +644,7 @@ h1 {
 }
 
 .data_title h3 {
-  font-size: 22px;
+  font-size: 20px;
   margin: 0;
   font-weight: 500;
   color: #fff;
@@ -1692,7 +1691,7 @@ table.table .status.active {
   margin-top: 2px;
 }
 
-.lo-for .psws {
+.lo-for .psws a{
   color: #fff;
   float: right;
 }

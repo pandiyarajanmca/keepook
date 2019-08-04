@@ -12,10 +12,9 @@ import { AngularFileUploaderComponent } from "angular-file-uploader";
   styleUrls: ['./company.component.css']
 })
 export class CompanyComponent implements OnInit {
+  
   createCompanyForm: FormGroup;
   submitted: boolean = false;
-
- 
 
   afuConfig = {
     uploadAPI: {
@@ -38,7 +37,7 @@ export class CompanyComponent implements OnInit {
       logo: ['', Validators.required],
       address: ['', Validators.required],
       city: ['', Validators.required],
-      zipcode: ['', Validators.required],
+      zipCode: ['', Validators.required],
       country: [''],
       phoneNumber: ['', Validators.required],
       contactPerson: ['', Validators.required],
@@ -59,10 +58,6 @@ export class CompanyComponent implements OnInit {
 
   createCompanySubmit() {
     this.submitted = true;
-
-    console.log(this.createCompanyForm.controls.value);
-    console.log(this.createCompanyForm.invalid);
-
     // stop here if form is invalid
     if (this.createCompanyForm.invalid) {
       return;
@@ -76,8 +71,6 @@ export class CompanyComponent implements OnInit {
       })
     }
 
-    // display form values on success
-    console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.createCompanyForm.value, null, 4));
   }
 
   get fConrols() { return this.createCompanyForm.controls; }
