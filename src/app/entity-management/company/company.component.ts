@@ -15,12 +15,9 @@ export class CompanyComponent implements OnInit {
   
   createCompanyForm: FormGroup;
   submitted: boolean = false;
+  token: string;
+  afuConfig : any;
 
-  afuConfig = {
-    uploadAPI: {
-      url:"https://example-file-upload-api"
-    }
-  };
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -31,6 +28,19 @@ export class CompanyComponent implements OnInit {
 
 
   ngOnInit() {
+     this.token = sessionStorage.getItem('token') ? JSON.parse(sessionStorage.getItem('token')): null;
+     console.log(this.token);
+     
+     this.afuConfig ={
+       theme:'attachPin',
+      uploadAPI: {
+        url:"http://23.96.4.235:9094/api/media/uploadFile",
+        headers: {
+          // "Content-Type" : "application/json;charset=UTF-8",
+          "Authorization" : 'Bearer ' + this.token
+           }
+      }
+    };
     this.createCompanyForm = this.formBuilder.group({
       companyName: ['', Validators.required],
       website: ['', Validators.required],
@@ -38,7 +48,7 @@ export class CompanyComponent implements OnInit {
       address: ['', Validators.required],
       city: ['', Validators.required],
       zipCode: ['', Validators.required],
-      country: [''],
+      country: ['', Validators.required],
       phoneNumber: ['', Validators.required],
       contactPerson: ['', Validators.required],
     });
@@ -62,8 +72,10 @@ export class CompanyComponent implements OnInit {
     if (this.createCompanyForm.invalid) {
       return;
     }
-
+   
     else {
+      console.log(this.createCompanyForm.value);
+      
       this.entityService.saveNewCompany(this.createCompanyForm.value).subscribe(res => {
         console.log(res);
       }, err => {
