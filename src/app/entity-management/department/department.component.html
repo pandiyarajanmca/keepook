@@ -1,54 +1,34 @@
-   <!--inner-container-->
-   <div class="row add_department_page">
-        <div class="container">
-            <!--title-->
-            <div class="title_col row-div">
-                <a href="javascript:void(0);" class="back_btn"><i class="la la-mail-reply"></i> Back</a>
-                <h1 class="heading">Create a New Organizational Unit</h1>
+<!--inner-container-->
+<div class="row mt-3 create_new_company">
+    <div class="container">
+        <!--title-->
+        <div class=" row-div">
+            <div class="title_col">
+                <a href="" class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
             </div>
-            <!--/title-->
-            
-            <!--data-section-->
-            <div class="data_section row-div">
-                <div class="data_title row-div">
-                    <h3>Add Departments to Your Organizational Unit (on company level or Org level?) </h3>
-                </div>
-                <div class="data_inner row-div">
-                    <div class="row">
+
+            <ul class="subm">
+                <li>Entity Management <a href="">/</a> </li>
+                <li>Company <a href="">/</a> </li>
+                <li><a href="">Add </a></li>
+            </ul>
+            <!-- <h1 class="heading">Create a New Company</h1> -->
+        </div>
+        <!--/title-->
+
+        <!--data-section-->
+        <div class="data_section row-div">
+            <div class="data_title row-div">
+                <h3>New Company Setup</h3>
+            </div>
+            <div class="data_inner row-div">
+                <div class="row">
                     <!--left-sidebar-->
                     <div class="col-12 col-lg-3 left_sidebar">
-                        <div class="sidebar">
-                            <h3>My Organizational Unit</h3>
-                            <div class="sidebar_menu">
-                                <ul>
-                                    <li class="active">
-                                        <a href="javascript:void(0);">
-                                            <img src="assets/images/plus_black.png" alt="" class="black_icon">
-                                            <img src="assets/images/plus_color.png" alt="" class="color_icon">
-                                            Add Departments
-                                        </a>
-                                    </li>
-                                    <li>	
-                                        <a href="javascript:void(0);">
-                                            <img src="assets/images/set_black.png" alt="" class="black_icon">
-                                            <img src="assets/images/set_color.png" alt="" class="color_icon">
-                                            Define Template Properties
-                                        </a>
-                                    </li>
-                                    <li>	
-                                        <a href="javascript:void(0);">
-                                            <img src="assets/images/hand_black.png" alt="" class="black_icon">
-                                            <img src="assets/images/hand_color.png" alt="" class="color_icon">
-                                            Define Contract Properties
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                        </div>
+                        <app-entity-sidebar></app-entity-sidebar>
                     </div>
                     <!--/left-sidebar-->
-                    
+
                     <!--right_container-->
                     <div class="col-12 col-lg-9 right_container">
                         <div class="inner_content row-div">
@@ -66,7 +46,8 @@
                                 <div class="select_department">
                                     <div class="select_col">
                                         <h3>Select Department to Add</h3>
-                                        <a href="javascript:void(0);" class="addMore_btn"><i class="la la-plus"></i> Add More</a>
+                                        <a href="javascript:void(0);" class="addMore_btn"><i class="la la-plus"></i> Add
+                                            More</a>
                                     </div>
                                     <div class="department_table table-responsive">
                                         <table class="table">
@@ -80,52 +61,83 @@
                                             <tbody>
                                                 <tr>
                                                     <td>Legal</td>
-                                                    <td><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> </td>
+                                                    <td>
+                                                        <p>Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry. Lorem Ipsum has been the industry's
+                                                            standard dummy text ever since the 1500s, when an unknown
+                                                            printer took a galley of type and scrambled it to make a
+                                                            type specimen book.</p>
+                                                    </td>
                                                     <td>
                                                         <div class="custom-control custom-radio">
-                                                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
-                                                            <label class="custom-control-label" for="customRadio1"></label>
-                                                        </div>	
+                                                            <input type="radio" id="customRadio1" name="customRadio"
+                                                                class="custom-control-input" checked>
+                                                            <label class="custom-control-label"
+                                                                for="customRadio1"></label>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Finance</td>
-                                                    <td><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> </td>
+                                                    <td>
+                                                        <p>Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry.</p>
+                                                    </td>
                                                     <td>
                                                         <div class="custom-control custom-radio">
-                                                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                                            <label class="custom-control-label" for="customRadio2"></label>
-                                                        </div>	
+                                                            <input type="radio" id="customRadio2" name="customRadio"
+                                                                class="custom-control-input">
+                                                            <label class="custom-control-label"
+                                                                for="customRadio2"></label>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Compliance</td>
-                                                    <td><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></td>
+                                                    <td>
+                                                        <p>Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry. Lorem Ipsum has been the industry's
+                                                            standard dummy text ever since the 1500s, when an unknown
+                                                            printer took a galley of type and scrambled it to make a
+                                                            type specimen book.</p>
+                                                    </td>
                                                     <td>
                                                         <div class="custom-control custom-radio">
-                                                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" >
-                                                            <label class="custom-control-label" for="customRadio3"></label>
-                                                        </div>	
+                                                            <input type="radio" id="customRadio3" name="customRadio"
+                                                                class="custom-control-input">
+                                                            <label class="custom-control-label"
+                                                                for="customRadio3"></label>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Loans Servicing</td>
-                                                    <td><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p></td>
+                                                    <td>
+                                                        <p>Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry. </p>
+                                                    </td>
                                                     <td>
                                                         <div class="custom-control custom-radio">
-                                                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input" >
-                                                            <label class="custom-control-label" for="customRadio4"></label>
-                                                        </div>	
+                                                            <input type="radio" id="customRadio4" name="customRadio"
+                                                                class="custom-control-input">
+                                                            <label class="custom-control-label"
+                                                                for="customRadio4"></label>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Sales</td>
-                                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </td>
+                                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                        industry. Lorem Ipsum has been the industry's standard dummy
+                                                        text ever since the 1500s, when an unknown printer took a galley
+                                                        of type and scrambled it to make a type specimen book. </td>
                                                     <td>
                                                         <div class="custom-control custom-radio">
-                                                            <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input" >
-                                                            <label class="custom-control-label" for="customRadio5"></label>
-                                                        </div>	
+                                                            <input type="radio" id="customRadio5" name="customRadio"
+                                                                class="custom-control-input">
+                                                            <label class="custom-control-label"
+                                                                for="customRadio5"></label>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -134,25 +146,24 @@
 
                                 </div>
 
-                            
-                                
+
+
                             </div>
                             <div class="tfooter_btn_col">
                                 <button type="button" class="btn btn-cancel"><i class="la la-close"></i> Cancel</button>
                                 <button type="button" class="btn btn-save"><i class="la la-check"></i> Save</button>
                             </div>
-                            
+
                         </div>
                     </div>
                     <!--/right_container-->
-                    </div>
                 </div>
-            
             </div>
-            <!--/data-section-->
-            
-            
+
         </div>
+        <!--/data-section-->
+
+
     </div>
-    <!--/inner-container-->
-    
+</div>
+<!--/inner-container-->
