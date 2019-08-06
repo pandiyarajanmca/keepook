@@ -1825,3 +1825,15 @@ link:focus, .nav-tabs .nav-link:hover {
   background: #612583;
 }
 
+.table-pagination .page-item.active .page-link {
+  background-color: #612684;
+  border-color: #612684;
+}
+.page-link {
+   color: #000;
+ 
+  border: 1px solid #f7f7f7;
+}
+.page-item.disabled .page-link {
+   border-color: #f7f7f7;
+}

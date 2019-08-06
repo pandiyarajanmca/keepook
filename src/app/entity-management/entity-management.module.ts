@@ -15,6 +15,7 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
 import { CommonModulesModule } from '../common-module/common-module';
 
 
+
 @NgModule({
   declarations: [
     CompanyComponent,
@@ -25,6 +26,7 @@ import { CommonModulesModule } from '../common-module/common-module';
     EntitySidebarComponent,
     EditCompanyComponent,
     ViewCompanyComponent,
+  
     ],  
   imports: [
     CommonModule,    
@@ -33,6 +35,7 @@ import { CommonModulesModule } from '../common-module/common-module';
     FormsModule, 
     ReactiveFormsModule,
     AngularFileUploaderModule, 
+    
   ],
   providers:[
     EntityService

@@ -19,6 +19,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpService} from './_serives/http.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { HttpService} from './_serives/http.service';
     HttpClientModule,  
     BrowserAnimationsModule,
     ToastrModule.forRoot({ positionClass: 'toast-bottom-right' }),
+    NgbModule
   ],
   providers: [AuthService, HttpService],
   bootstrap: [AppComponent]

@@ -9,6 +9,7 @@ import { PageLoaderComponent } from './page-loader/page-loader.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ReversePipe } from '../pipe/reverse.pipe';
 
+
 @NgModule({
   declarations: [HeaderComponent, PopupModalComponent,  PageLoaderComponent, ReversePipe],
   imports: [
@@ -18,6 +19,7 @@ import { ReversePipe } from '../pipe/reverse.pipe';
     FormsModule,
     ReactiveFormsModule,
     NgxSpinnerModule,
+   
   ],
   exports: [ 
     HeaderComponent,

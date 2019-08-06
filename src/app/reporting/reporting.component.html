@@ -23,38 +23,88 @@
                 <h3>New Company Setup</h3>
             </div>
             <div class="data_inner row-div">
-                <div class="table-form">
-                    
-                </div>
-                    <div class="table-resposive">
-                        <table class="w-100 table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Firstname</th>
-                                    <th>Lastname</th>
-                                    <th>Email</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>John</td>
-                                    <td>Doe</td>
-                                    <td>john@example.com</td>
-                                </tr>
-                                <tr>
-                                    <td>Mary</td>
-                                    <td>Moe</td>
-                                    <td>mary@example.com</td>
-                                </tr>
-                                <tr>
-                                    <td>July</td>
-                                    <td>Dooley</td>
-                                    <td>july@example.com</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="table-form col-12">
+                    <div class="row">
+                        <div class="col-sm-4 pl-0">
+                                <div class=" module-col">
+                                        <span>Search:</span>
+                                       <input type="text" placeholder="Type to Filter">
+                                    </div>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                                <div class=" module-col">
+                                        <span>Org. Unit</span>
+                                        <select name="">
+                                            <option value="">Emirates NBD Bank</option>
+                                            <option value="">Emirates NBD Bank</option>
+                                        </select>
+                                    </div>
+                        </div>
+                        <div class="col-sm-4 pr-0 ml-auto">
+                            <div class=" module-col  ml-auto">
+                                <span>Show Per Page:</span>
+                                <select name="">
+                                    <option value="">All</option>
+                                    <option value="">10</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
+                <div class="table-resposive">
+                    <table class="w-100 table table-hover">
+                        <thead>
+                            <tr>
+                                <th>REPORT NAME</th>
+                                <th>DATA OF CREATION</th>
+                                <th>CREATED BY</th>
+                                <th>LAST MODIFIED ON</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2019_UserbyOrg</td>
+                                <td>21-10-2018</td>
+                                <td>John Doe</td>
+                                <td>21-10-2018</td>
+                                <td class="text-center">
+                                    <img class="mr-5" style="width: 20px;height: 20px;" src="./assets/images/eye.svg" />
+                                    <img src="./assets/images/edit.svg" />
+                                    <img class="ml-5" src="./assets/images/download.svg" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2019_UserbyOrg</td>
+                                <td>21-10-2018</td>
+                                <td>John Doe</td>
+                                <td>21-10-2018</td>
+                                <td class="text-center">
+                                    <img class="mr-5" style="width: 20px;height: 20px;" src="./assets/images/eye.svg" />
+                                    <img src="./assets/images/edit.svg" />
+                                    <img class="ml-5" src="./assets/images/download.svg" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2019_UserbyOrg</td>
+                                <td>21-10-2018</td>
+                                <td>John Doe</td>
+                                <td>21-10-2018</td>
+                                <td class="text-center">
+                                    <img class="mr-5" style="width: 20px;height: 20px;" src="./assets/images/eye.svg" />
+                                    <img src="./assets/images/edit.svg" />
+                                    <img class="ml-5" src="./assets/images/download.svg" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-pagination float-right">
+                    <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination">
+                    </ngb-pagination>
+                </div>
+            </div>
         </div>
         <!--/data-section-->
 
