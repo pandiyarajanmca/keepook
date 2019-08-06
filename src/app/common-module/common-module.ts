@@ -11,7 +11,8 @@ import { ReversePipe } from '../pipe/reverse.pipe';
 
 
 @NgModule({
-  declarations: [HeaderComponent, PopupModalComponent,  PageLoaderComponent, ReversePipe],
+  declarations: [HeaderComponent, PopupModalComponent,  PageLoaderComponent,
+    ReversePipe,   ],
   imports: [
     CommonModule,
     NgbModule,
