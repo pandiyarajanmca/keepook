@@ -17,6 +17,7 @@ import { EditOrganizationComponent } from './organization/edit-organization/edit
 import { ViewOrganizationComponent } from './organization/view-organization/view-organization.component';
 import { ViewUserGroupComponent } from './user-group/view-user-group/view-user-group.component';
 import { EditUserGroupComponent } from './user-group/edit-user-group/edit-user-group.component';
+import { DepartmentComponent } from './department/department.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { EditUserGroupComponent } from './user-group/edit-user-group/edit-user-g
     EditOrganizationComponent,
     ViewOrganizationComponent,
     EditUserGroupComponent,
-    ViewUserGroupComponent
+    ViewUserGroupComponent,
+    DepartmentComponent
   ],
   imports: [
     CommonModule,

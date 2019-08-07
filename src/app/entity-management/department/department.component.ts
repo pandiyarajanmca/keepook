@@ -8,7 +8,7 @@ import { EntityService } from '../../_serives/entity.service';
 @Component({
   selector: 'app-department',
   templateUrl: './department.component.html',
-  styleUrls: ['./departmentcomponent.css']
+  styleUrls: ['./department.component.css']
 })
 export class DepartmentComponent implements OnInit {
   createCompanyForm: FormGroup;
