@@ -1,4 +1,3 @@
-<!--inner-container-->
 <div class="row mt-3 create_new_company">
 	<div class="container">
 		<!--title-->
@@ -63,12 +62,19 @@
 									<h3>Company Logo</h3>
 									<p>Select an image file on your computer (4MB max)</p>
 									<div class="browse_file">
+											<angular-file-uploader #fileUpload1
+											[config]="afuConfig"
+											[resetUpload]="true"
+											(ApiResponse)="DocUpload($event)">
+									  </angular-file-uploader>
 										<div class="custom-file">
+											
+									  
 											<input type="file" required class="custom-file-input" formControlName="logo"
 												name="logo">
 											<label class="custom-file-label" for="customFile">
 												<img src="assets/images/browse_file.png" alt="">
-											</label>
+											</label> 
 											<small *ngIf="submitted && fConrols.logo?.errors" class="text-danger">
 												<div *ngIf="fConrols.logo?.errors?.required">&#x26A0; Company logo is
 													required</div>
@@ -108,7 +114,8 @@
 										<label class="label_field">Country</label>	
 										<div class="controls_field">
 												<select class="form-control" formConrolName="country" name="country">
-													<option>United Arab Emirates</option>
+														<option [value]="'UAE'">United Arab Emirates</option>
+														<option [value]="'IN'">IN</option>  
 												</select>
 												<small *ngIf="submitted && fConrols.country?.errors" class="text-danger">
 													<div *ngIf="fConrols.country?.errors?.required">&#x26A0;Please select the country
@@ -116,13 +123,13 @@
 												</small>
 										</div>
 									</div>
-									<div class="form-group zipcode_field">
-										<label for="" class="label_field">Zipcode</label>
+									<div class="form-group zipCode_field">
+										<label for="" class="label_field">ZIP Code</label>
 										<div class="controls_field">
-											<input type="text" formControlName="zipcode" name="zipcode"
+											<input type="text" formControlName="zipCode" name="zipCode"
 												class="form-control" placeholder="Enter the ZIP code">
-											<small *ngIf="submitted && fConrols.zipcode?.errors" class="text-danger">
-												<div *ngIf="fConrols.zipcode?.errors?.required">&#x26A0;ZIP code is
+											<small *ngIf="submitted && fConrols.zipCode?.errors" class="text-danger">
+												<div *ngIf="fConrols.zipCode?.errors?.required">&#x26A0;ZIP Code is
 													required
 												</div>
 											</small>
