@@ -1802,3 +1802,39 @@ link:focus, .nav-tabs .nav-link:hover {
 .left-men-u .card-body{
   margin-bottom: 0;
 }
+
+/* work flow steps  dialog*/
+.workflow-step .modal-dialog{
+   max-width: 750px;   
+}
+.workflow-step .modal-header{
+  padding: 0;
+}
+.workflow-step .nav-tabs li{
+  padding: 0;
+  text-align: center;
+}
+.workflow-step .nav-tabs li a{
+  padding: 10px 21.1px;
+  display: block;
+  color: #120719;
+  background: #f5f5f5;
+}
+
+.workflow-step .nav-tabs li.active a{
+  color: #ffffff;
+  background: #612583;
+}
+
+.table-pagination .page-item.active .page-link {
+  background-color: #612684;
+  border-color: #612684;
+}
+.page-link {
+   color: #000;
+ 
+  border: 1px solid #f7f7f7;
+}
+.page-item.disabled .page-link {
+   border-color: #f7f7f7;
+}
