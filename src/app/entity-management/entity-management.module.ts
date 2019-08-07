@@ -19,6 +19,7 @@ import { ViewUserGroupComponent } from './user-group/view-user-group/view-user-g
 import { EditUserGroupComponent } from './user-group/edit-user-group/edit-user-group.component';
 import { DepartmentComponent } from './department/department.component';
 
+
 @NgModule({
   declarations: [
     CompanyComponent,

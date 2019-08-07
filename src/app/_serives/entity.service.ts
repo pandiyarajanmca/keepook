@@ -35,13 +35,42 @@ export class EntityService {
 
 	editCompany(data: any, headers?: any) {
 		return this.httpservice
-			.put(this.entityPath + 'agreement', data, null, headers)
+			.put(this.entityPath + 'company', data, null, headers)
 			.map((res) => res);
 	}
 
-	getSavedContract(id) {
+	
+	// getSavedContract(id) {
+	// 	return this.httpservice
+	// 		.get(this.entityPath + 'agreement/' + id)
+	// 		.map((res) => res);
+	// }
+	getAllCompanies() {
 		return this.httpservice
-			.get(this.entityPath + 'agreement/' + id)
+			.get(this.entityPath + 'company' )
+			.map((res) => res);
+	}
+
+
+
+
+	saveNewOrganization(data: any, headers?: any) {
+        console.log('data', data);
+        
+		return this.httpservice
+			.post(this.entityPath + 'create-organisation-unit', data, null, headers)
+			.map((res) => res);
+	}
+
+	editOrganization(data: any, headers?: any) {
+		return this.httpservice
+			.put(this.entityPath + 'organisation-unit', data, null, headers)
+			.map((res) => res);
+	}
+	
+	getAllOrganization() {
+		return this.httpservice
+			.get(this.entityPath + 'organisation-unit' )
 			.map((res) => res);
 	}
 
