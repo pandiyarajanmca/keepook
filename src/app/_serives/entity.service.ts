@@ -18,7 +18,7 @@ export class EntityService {
 		private router: Router
 	) {
 		this.env = environment;
-		this.entityPath = this.env.priceManagerBaseUrl;
+		this.entityPath = this.env.entityPath;
 	}
 	env: any;
 	entityPath: string;
@@ -33,24 +33,24 @@ export class EntityService {
 			.map((res) => res);
 	}
 
-	editCompany(data: any, headers?: any) {
-		return this.httpservice
-			.put(this.entityPath + 'company', data, null, headers)
+	editCompany(data: any, id: any, headers?: any) {  
+        console.log(id);
+        return this.httpservice
+			.put(this.entityPath + 'company/'+ id, data, null, headers)
 			.map((res) => res);
 	}
 
-	
-	// getSavedContract(id) {
-	// 	return this.httpservice
-	// 		.get(this.entityPath + 'agreement/' + id)
-	// 		.map((res) => res);
-	// }
-	getAllCompanies() {
+	getAllCompany() {
 		return this.httpservice
-			.get(this.entityPath + 'company' )
+			.get(this.entityPath + 'company')
+			.map((res) => res);
+    }
+    
+	getCompanyByID(id) {
+		return this.httpservice
+			.get(this.entityPath + 'company/' + id)
 			.map((res) => res);
 	}
-
 
 
 
@@ -67,7 +67,7 @@ export class EntityService {
 			.put(this.entityPath + 'organisation-unit', data, null, headers)
 			.map((res) => res);
 	}
-	
+
 	getAllOrganization() {
 		return this.httpservice
 			.get(this.entityPath + 'organisation-unit' )
