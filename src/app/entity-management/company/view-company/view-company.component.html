@@ -33,21 +33,35 @@
 
                             </div>
                             <div class="table-resposive">
-                                <table class="w-100 table table-hover">
+                                <table class="w-100 table table-stripped">
                                     <thead>
                                         <tr>
-                                            <th>Firstname</th>
-                                            <th>Lastname</th>
-                                            <th>Email</th>
+                                            <th>Name</th>
+                                            <th>City</th>
+                                            <th>Country</th>
+                                            <th>Contact Person</th>
+                                            <th>Phone Number</th>
+                                            <th>Website</th>
+                                            <th>Status</th>
+                                            <th>ZipCode</th>
+                                            <th>Edit</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td class="tfooter_btn_col"><button class="float-none btn btn-save" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> EDIT</button></td>
+
+                               
+                                    <tbody *ngIf="companyList?.length>0">
+                                        <tr *ngFor="let company of companyList">
+                                            <td>{{company.companyName}}</td>
+                                            <td>{{company.city}}</td>
+                                            <td>{{company.country}}</td>
+                                            <td>{{company.contactPerson}}</td>
+                                            <td>{{company.phoneNumber}}</td>
+                                            <td>{{company.website}}</td>
+                                            <td>{{company.status}}</td>
+                                            <td>{{company.zipCode}}</td>  
+                                            <td class="tfooter_btn_col"><button class="float-none btn btn-save" data-toggle="modal" (click)="editRecord=company" data-target="#myModal"><i class="fa fa-pencil"></i></button></td>
                                         </tr>
-                                        <tr>
+                                        <!-- <tr>
                                             <td>Mary</td>
                                             <td>Moe</td>
                                              <td class="tfooter_btn_col"><button class="float-none btn btn-save" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> EDIT</button></td>
@@ -56,7 +70,7 @@
                                             <td>July</td>
                                             <td>Dooley</td>
                                             <td class="tfooter_btn_col"><button class="float-none btn btn-save" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> EDIT</button></td>
-                                        </tr>
+                                        </tr> -->
                                     </tbody>
                                 </table>
                             </div>
@@ -71,4 +85,4 @@
         </div>
     </div>
 </div>
-<app-edit-company [editRecords]=records></app-edit-company>
+<app-edit-company [editRecords]=editRecord></app-edit-company>

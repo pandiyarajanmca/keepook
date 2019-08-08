@@ -636,7 +636,6 @@ h1 {
   bottom: -1px;
   z-index: 1;
 }
-
 .data_title {
   background: #0099cc;
   float: left;
@@ -645,7 +644,7 @@ h1 {
 }
 
 .data_title h3 {
-  font-size: 22px;
+  font-size: 20px;
   margin: 0;
   font-weight: 500;
   color: #fff;
@@ -913,7 +912,7 @@ h1 {
   padding-left: 10px;
 }
 
-.tfooter_btn_col .btn-save {
+.tfooter_btn_col .btn-save  {
   background: #08adc9;
   float: right;
 }
@@ -1633,6 +1632,11 @@ table.table .status.active {
   cursor: pointer;
 }
 
+.tfooter_btn_col .btn-login i {
+  color: #612684;
+}
+
+
 /* Add a hover effect for buttons */
 .page-login button:hover {
   opacity: 0.8;
@@ -1692,7 +1696,7 @@ table.table .status.active {
   margin-top: 2px;
 }
 
-.lo-for .psws {
+.lo-for .psws a{
   color: #fff;
   float: right;
 }

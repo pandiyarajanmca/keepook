@@ -7,7 +7,7 @@ export const environment = {
   userServiceBaseUrl: 'http://23.96.4.235:9094/api/auth/',
  
   entityPath: "http://23.96.4.235:9094/api/entity/",
-  OAUTH_CLIENT_SECRET: "1234",
+  
 };
 
 /*

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { EntityService } from 'src/app/_serives/entity.service';
 
 @Component({
   selector: 'app-view-company',
@@ -6,14 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-company.component.css']
 })
 export class ViewCompanyComponent implements OnInit {
-  records: any;
-  constructor() { }
+  companyList: any;
+  editRecord: any;
+  constructor(private entityService: EntityService) { }
 
   ngOnInit() {
-    this.records={
-      name: "pandi",
-      age:25
-    }
+    this.getCompany();
   }
 
+  getCompany() {
+    this.entityService.getAllCompany().subscribe(res => {
+      if (res['statusCode'] == 202) {
+        this.companyList = res['data']['companies'];
+      }
+    }, err => {
+
+    });
+  }
 }
