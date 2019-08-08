@@ -12,13 +12,13 @@ import { ViewOrganizationComponent } from './organization/view-organization/view
 const routes: Routes = [
   { path: '', component: EntityManagementComponent },
   { path: 'add-company', component: CompanyComponent },
+  { path: 'add-organization', component: OrganizationComponent },
+  { path: 'add-department', component:DepartmentComponent },
+  { path: 'add-user-groups', component: UserGroupComponent },
   { path: 'edit-view-company', component: ViewCompanyComponent },
-  { path: 'edit-view-organization', component: OrganizationComponent },
+  { path: 'edit-view-organization', component: ViewOrganizationComponent },
   { path: 'edit-view-department', component: ViewDepartmentComponent },
   { path: 'edit-view-user-groups', component: ViewUserGroupComponent },
-  { path: 'add-organization', component: OrganizationComponent },
-  { path: 'add-department', component: DepartmentComponent },
-  { path: 'add-user-groups', component: UserGroupComponent }
 ];
 
 @NgModule({

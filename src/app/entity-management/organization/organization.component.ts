@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { EntityService } from 'src/app/_serives/entity.service';
 
 @Component({
   selector: 'app-organization',
@@ -10,35 +11,26 @@ import { Router } from '@angular/router';
 export class OrganizationComponent implements OnInit {
   createCompanyForm: FormGroup;
   submitted: boolean= false;
+  companyList: any;
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
+    private entityService: EntityService
   ) { }
   vodafoneMarkets: Array<any> = [];
   CompanyIdExistError: boolean = false;
 
   ngOnInit() {
     this.createCompanyForm = this.formBuilder.group({
-      companyName: ['', Validators.required],
-      location: ['', Validators.required],
-      location1: ['', Validators.required],
-      logo: ['', Validators.required],
-      companyAddress: ['', Validators.required],
-      // position: ['', Validators.required],
-      city: ['', Validators.required],
-      state: ['', Validators.required],
-      zipcode: ['', Validators.required],
-      // country: [''],
-      phoneNumber: ['', Validators.required],      
-      contactPerson: ['', Validators.required],
+      companyId: ['', Validators.required],
+      name: ['', Validators.required],
+      description: ['', Validators.required],
+  
+      
     });
+    this.getCompany();
 
-    this.createCompanyForm.controls['companyName'].valueChanges.subscribe(val => {  
-        // this.createCompanyForm.controls['location'].setValidators([Validators.required]);
-        // this.createCompanyForm.controls['location1'].setValidators([Validators.required]);
-       
-  });
-
+    
   }
   
   
@@ -74,5 +66,14 @@ get fConrols() { return this.createCompanyForm.controls; }
     //  });
    }
 
+  }
+  getCompany() {
+    this.entityService.getAllCompany().subscribe(res => {
+      if (res['statusCode'] == 202) {
+        this.companyList = res['data']['companies'];
+      }
+    }, err => {
+
+    });
   }
 }
