@@ -18,7 +18,7 @@ export class EntityService {
 		private router: Router
 	) {
 		this.env = environment;
-		this.entityPath = this.env.entityPath;
+		this.entityPath = this.env.entityPath	;
 	}
 	env: any;
 	entityPath: string;
@@ -51,8 +51,6 @@ export class EntityService {
 			.get(this.entityPath + 'company/' + id)
 			.map((res) => res);
 	}
-
-
 
 	saveNewOrganization(data: any, headers?: any) {
         console.log('data', data);
