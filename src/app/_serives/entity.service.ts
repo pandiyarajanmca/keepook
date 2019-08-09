@@ -12,6 +12,9 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class EntityService {
+  saveNewRoles(value: any) {
+    throw new Error("Method not implemented.");
+  }
 	constructor(
 		private httpservice: HttpService,
 		private httpClient: HttpClient,

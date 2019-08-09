@@ -28,7 +28,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
     ReportingComponent,    
     LoginComponent,
-    ChartComponent    
+    ChartComponent 
   ],
   imports: [
     BrowserModule,
@@ -43,7 +43,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,  
     BrowserAnimationsModule,
     ToastrModule.forRoot({ positionClass: 'toast-bottom-right' }),
-    NgbModule
+    NgbModule,
+     
+
   ],
   providers: [AuthService, HttpService],
   bootstrap: [AppComponent]

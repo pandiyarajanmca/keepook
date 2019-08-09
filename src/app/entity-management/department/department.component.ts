@@ -24,15 +24,10 @@ export class DepartmentComponent implements OnInit {
 
   ngOnInit() {
     this.createCompanyForm = this.formBuilder.group({
-      companyName: ['', Validators.required],
-      website: ['', Validators.required],
-      logo: ['', Validators.required],
-      address: ['', Validators.required],
-      city: ['', Validators.required],
-      zipcode: ['', Validators.required],
-      country: [''],
-      phoneNumber: ['', Validators.required],
-      contactPerson: ['', Validators.required],
+      name: ['', Validators.required],
+      description: ['', Validators.required],
+      organisationUnitId: ['', Validators.required],
+      
     });
 
     this.createCompanyForm.controls['companyName'].valueChanges.subscribe(val => {
