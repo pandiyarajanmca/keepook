@@ -9,7 +9,7 @@ import { EntityService } from 'src/app/_serives/entity.service';
 export class ViewUsersComponent implements OnInit {
   usersList: any;
   editRecord: any;
-  constructor(private entityService: EntityService) { }
+  constructor(private accessService: EntityService) { }
 
   ngOnInit() {
     this.getusers();

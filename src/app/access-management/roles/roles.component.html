@@ -3,11 +3,11 @@
 		<!--title-->
 		<div class=" row-div">
 			<div class="title_col">
-				<a href="" class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+				<a href=" " class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
 			</div>
 
 			<ul class="subm">
-				<li>Entity Management <a href="">/</a> </li>
+				<li>Access Management <a href="">/</a> </li>
 				<li>Roles <a href="">/</a> </li>
 				<li><a href="">Add </a></li>
 			</ul>
@@ -24,7 +24,7 @@
 				<div class="row">
 					<!--left-sidebar-->
 					<div class="col-12 col-lg-3 left_sidebar">
-							<app-access-sidebar></app-access-sidebar>
+						<app-access-sidebar></app-access-sidebar>
 					</div>
 
 					<!--right_container-->
@@ -51,12 +51,13 @@
 										<input type="text" class="form-control" required name="website"
 											formControlName="website" placeholder="Enter the website URL">
 										<small *ngIf="submitted && fConrols.website?.errors" class="text-danger">
-											<div *ngIf="fConrols.website?.errors?.required">&#x26A0; Website URL invalid</div>
+											<div *ngIf="fConrols.website?.errors?.required">&#x26A0; Website URL invalid
+											</div>
 										</small>
 									</div>
 
 								</div>
-						
+
 
 
 								<div class="form-group comp_detail">
@@ -66,8 +67,7 @@
 										<div class="controls_field">
 											<textarea class="form-control" formControlName="address"
 												placeholder="Enter the company address"></textarea>
-											<small *ngIf="submitted && fConrols.address?.errors"
-												class="text-danger">
+											<small *ngIf="submitted && fConrols.address?.errors" class="text-danger">
 												<div *ngIf="fConrols.address?.errors?.required">&#x26A0; Roles
 													Address is required</div>
 											</small>
@@ -87,16 +87,17 @@
 									</div>
 
 									<div class="form-group state_field">
-										<label class="label_field">Country</label>	
+										<label class="label_field">Country</label>
 										<div class="controls_field">
-												<select class="form-control" formConrolName="country" name="country">
-														<option [value]="'UAE'">United Arab Emirates</option>
-														<option [value]="'IN'">IN</option>  
-												</select>
-												<small *ngIf="submitted && fConrols.country?.errors" class="text-danger">
-													<div *ngIf="fConrols.country?.errors?.required">&#x26A0;Please select the country
-													</div>
-												</small>
+											<select class="form-control" formConrolName="country" name="country">
+												<option [value]="'UAE'">United Arab Emirates</option>
+												<option [value]="'IN'">IN</option>
+											</select>
+											<small *ngIf="submitted && fConrols.country?.errors" class="text-danger">
+												<div *ngIf="fConrols.country?.errors?.required">&#x26A0;Please select
+													the country
+												</div>
+											</small>
 										</div>
 									</div>
 									<div class="form-group zipCode_field">

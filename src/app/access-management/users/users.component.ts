@@ -28,18 +28,20 @@ export class UsersComponent implements OnInit {
 
   
     this.createUsersForm = this.formBuilder.group({
-      usersName: ['', Validators.required],
-      website: ['', Validators.required],
-      logo: ['', Validators.required],
-      address: ['', Validators.required],
-      city: ['', Validators.required],
-      zipCode: ['', Validators.required],
-      country: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
-      contactPerson: ['', Validators.required],
+      fullName: ['', Validators.required],
+      userName: ['', Validators.required],
+      email: ['', Validators.required],
+      contactDetails: ['', Validators.required],
+      deparment: ['', Validators.required],
+      role: ['', Validators.required],
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required],
+      validTill: ['', Validators.required],
+      validFrom: ['', Validators.required],
+
     });
 
-    this.createUsersForm.controls['usersName'].valueChanges.subscribe(val => {
+    this.createUsersForm.controls['full Name'].valueChanges.subscribe(val => {
       // this.createUsersForm.controls['location'].setValidators([Validators.required]);
       // this.createUsersForm.controls['location1'].setValidators([Validators.required]);
 

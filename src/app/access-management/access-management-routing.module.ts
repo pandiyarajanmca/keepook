@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', component: AccessManagementComponent },
   { path: 'add-roles', component: RolesComponent },
  { path: 'add-users', component: UsersComponent },
-  { path: 'edit-view-role', component: ViewRolesComponent },
+  { path: 'edit-view-roles', component: ViewRolesComponent },
   { path: 'edit-view-users', component: ViewUsersComponent },
   {path:'assign-roles', component:AssignRolesComponent}
 ];

@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'edit-view-organization', component: ViewOrganizationComponent },
   { path: 'edit-view-department', component: ViewDepartmentComponent },
   { path: 'edit-view-user-groups', component: ViewUserGroupComponent },
+  
 ];
 
 @NgModule({
