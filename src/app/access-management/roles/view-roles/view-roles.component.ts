@@ -2,9 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { EntityService } from 'src/app/_serives/entity.service';
 
 @Component({
-  selector: 'app-view-Roles',
-  templateUrl: './view-Roles.component.html',
-  styleUrls: ['./view-Roles.component.css']
+  selector: 'app-view-roles',
+  templateUrl: './view-roles.component.html',
+  styleUrls: ['./view-roles.component.css']
 })
 export class ViewRolesComponent implements OnInit {
   RolesList: any;
