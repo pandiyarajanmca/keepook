@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { forkJoin, from } from 'rxjs';
@@ -20,7 +21,8 @@ export class RolesComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private entityService: EntityService
+    private entityService: EntityService,
+    private _location: Location
   ) { }
 
 
@@ -50,8 +52,8 @@ export class RolesComponent implements OnInit {
     // this.fileUpload1.resetFileUpload();
   }
 
-  DocUpload(e) {
-    console.log(e);
+  goBack() {
+    this._location.back();
   }
 
 

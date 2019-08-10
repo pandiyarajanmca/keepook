@@ -4,12 +4,12 @@
         <!--title-->
         <div class=" row-div">
             <div class="title_col">
-                <a href="" class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+                <a (click)='goBack()' class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
             </div>
             <ul class="subm">
-                <li>Entity Management <a href="">/</a> </li>
-                <li>Company <a href="">/</a> </li>
-                <li><a href="">VIEW AND EDIT </a></li>
+                <li>Access Management <a href="">/</a> </li>
+                <li>Users <a href="">/</a> </li>
+                <li><a href="">View And Edit</a></li>
             </ul>
             <!-- <h1 class="heading">Create a New Company</h1> -->
         </div>
@@ -18,7 +18,7 @@
         <!--data-section-->
         <div class="data_section row-div">
             <div class="data_title row-div">
-                <h3>VIEW AND EDIT COMPANY</h3>
+                <h3>VIEW AND EDIT Users</h3>
             </div>
             <div class="data_inner row-div">
                 <div class="row">
@@ -48,7 +48,7 @@
                                         </tr>
                                     </thead>
 
-                               
+
                                     <tbody *ngIf="rolesList?.length>0">
                                         <tr *ngFor="let roles of rolesList">
                                             <td>{{roles.rolesName}}</td>
@@ -58,8 +58,10 @@
                                             <td>{{roles.phoneNumber}}</td>
                                             <td>{{roles.website}}</td>
                                             <td>{{roles.status}}</td>
-                                            <td>{{roles.zipCode}}</td>  
-                                            <td class="tfooter_btn_col"><button class="float-none btn btn-save" data-toggle="modal" (click)="editRecord=roles" data-target="#myModal"><i class="fa fa-pencil"></i></button></td>
+                                            <td>{{roles.zipCode}}</td>
+                                            <td class="tfooter_btn_col"><button class="float-none btn btn-save"
+                                                    data-toggle="modal" (click)="editRecord=roles"
+                                                    data-target="#myModal"><i class="fa fa-pencil"></i></button></td>
                                         </tr>
                                         <!-- <tr>
                                             <td>Mary</td>

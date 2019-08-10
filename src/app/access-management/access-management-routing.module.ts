@@ -14,7 +14,7 @@ const routes: Routes = [
  { path: 'add-users', component: UsersComponent },
   { path: 'edit-view-roles', component: ViewRolesComponent },
   { path: 'edit-view-users', component: ViewUsersComponent },
-  {path:'assign-roles', component:AssignRolesComponent}
+  {path:'assign-roles', component: AssignRolesComponent}
 ];
 
 @NgModule({

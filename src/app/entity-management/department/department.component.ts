@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { forkJoin, from } from 'rxjs';
 import { EntityService } from '../../_serives/entity.service';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -16,7 +17,8 @@ export class DepartmentComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private entityService: EntityService
+    private entityService: EntityService,
+    private _location: Location
   ) { }
 
 
@@ -29,6 +31,7 @@ export class DepartmentComponent implements OnInit {
       organisationUnitId: ['', Validators.required],
       
     });
+   
 
     this.createCompanyForm.controls['companyName'].valueChanges.subscribe(val => {
       // this.createCompanyForm.controls['location'].setValidators([Validators.required]);
@@ -36,6 +39,9 @@ export class DepartmentComponent implements OnInit {
 
     });
 
+  }
+  goBack() {
+    this._location.back();
   }
 
 

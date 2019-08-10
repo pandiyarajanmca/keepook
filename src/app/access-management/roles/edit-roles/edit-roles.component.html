@@ -6,7 +6,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
 
             </div>
-            <form class="modal-body" [formGroup]="editCompanyForm" (ngSubmit)="editCompanySubmit()">
+            <form class="modal-body" [formGroup]="editRolesForm" (ngSubmit)="editRoleSubmit()">
                 <div class="data_section row-div">
                     <div class="table-resposive">
                         <table class="w-100  no-borders">
@@ -14,7 +14,7 @@
                                 <tr>
                                     <td class="p-1">Name: </td>
                                     <td class="p-1">
-                                        <input type="text" formControlName="companyName" class="form-control"
+                                        <input type="text" formControlName="rolesName" class="form-control"
                                             value="{{editRecords?.companyName}}">
                                     </td>
                                 </tr>

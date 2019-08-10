@@ -5,6 +5,7 @@ import { forkJoin, from } from 'rxjs';
 import { EntityService } from '../../_serives/entity.service';
 import { ViewChild } from '@angular/core';
 import { AngularFileUploaderComponent } from "angular-file-uploader";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-company',
@@ -21,7 +22,8 @@ export class CompanyComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private entityService: EntityService
+    private entityService: EntityService,
+    private _location: Location
   ) { }
 
 
@@ -63,6 +65,10 @@ export class CompanyComponent implements OnInit {
 
   DocUpload(e) {
     console.log(e);    
+  }
+
+  goBack() {
+    this._location.back();
   }
 
 

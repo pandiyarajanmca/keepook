@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-view-user-group',
@@ -7,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewUserGroupComponent implements OnInit {
   records: any;
-  constructor() { }
+  constructor(private _location: Location) { }
 
   ngOnInit() {
     this.records = {
       name: "pandi",
       age: 25
     }
+  }
+  goBack() {
+    this._location.back();
   }
 
 }

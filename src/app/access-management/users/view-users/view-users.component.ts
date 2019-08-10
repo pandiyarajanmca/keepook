@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { EntityService } from 'src/app/_serives/entity.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-view-users',
@@ -9,10 +10,16 @@ import { EntityService } from 'src/app/_serives/entity.service';
 export class ViewUsersComponent implements OnInit {
   usersList: any;
   editRecord: any;
-  constructor(private accessService: EntityService) { }
+  constructor(
+    private accessService: EntityService,
+    private _location: Location
+    ) { }
 
   ngOnInit() {
     this.getusers();
+  }
+  goBack() {
+    this._location.back();
   }
 
   getusers() {

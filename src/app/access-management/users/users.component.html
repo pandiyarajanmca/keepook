@@ -3,7 +3,7 @@
 		<!--title-->
 		<div class=" row-div">
 			<div class="title_col">
-				<a href="" class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+				<a (click)='goBack()' class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
 			</div>
 
 			<ul class="subm">
@@ -30,7 +30,7 @@
 					<!--right_container-->
 
 					<div class="col-12 col-lg-9 right_container">
-						<form [formGroup]="createCompanyForm" class="inner_content row-div"
+						<form [formGroup]="createUsersForm" class="inner_content row-div"
 							(ngSubmit)="createCompanySubmit()">
 							<div class="create_company_form global_form">
 
@@ -89,7 +89,7 @@
 
 									<div class="controls_field">
 										<input type="text" class="form-control" required name="contactDetails"
-											formControlName="website">
+											formControlName="contactDetails">
 										<small *ngIf="submitted && fConrols.contactDetails?.errors" class="text-danger">
 											<div *ngIf="fConrols.contactDetails?.errors?.required">&#x26A0; Contact Details invalid
 											</div>
@@ -136,7 +136,7 @@
 										<label class="label_field">Password</label>
 										<div class="controls_field">
 											<input type="text" class="form-control" required name="password"
-												formControlName="website">
+												formControlName="password">
 											<small *ngIf="submitted && fConrols.password?.errors" class="text-danger">
 												<div *ngIf="fConrols.password?.errors?.required">&#x26A0; Invalid Password 
 												</div>
@@ -150,7 +150,7 @@
 										<label class="label_field">Confirm Password</label>
 										<div class="controls_field">
 											<input type="text" class="form-control" required name="confirmPassword"
-												formControlName="website">
+												formControlName="confirmPassword">
 											<small *ngIf="submitted && fConrols.confirmPassword?.errors" class="text-danger">
 												<div *ngIf="fConrols.confirmPassword?.errors?.required">&#x26A0; Wrong Password
 												</div>
@@ -167,7 +167,7 @@
 										<label class="label_field">Valid From</label>
 										<div class="controls_field">
 											<input type="text" class="form-control" required name="validFrom"
-												formControlName="website">
+												formControlName="validFrom">
 											<small *ngIf="submitted && fConrols.validFrom?.errors" class="text-danger">
 												<div *ngIf="fConrols.validFrom?.errors?.required">&#x26A0; Select Valid Date
 												</div>
@@ -181,7 +181,7 @@
 										<label class="label_field"> Valid Till</label>
 										<div class="controls_field">
 											<input type="text" class="form-control" required name="validTill"
-												formControlName="website">
+												formControlName="validTill">
 											<small *ngIf="submitted && fConrols.validTill?.errors" class="text-danger">
 												<div *ngIf="fConrols.validTill?.errors?.required">&#x26A0; Select Valid Date
 												</div>

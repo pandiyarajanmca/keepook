@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EntityService } from 'src/app/_serives/entity.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-organization',
@@ -15,7 +16,8 @@ export class OrganizationComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private entityService: EntityService
+    private entityService: EntityService,
+    private _location:Location
   ) { }
   vodafoneMarkets: Array<any> = [];
   CompanyIdExistError: boolean = false;
@@ -28,9 +30,13 @@ export class OrganizationComponent implements OnInit {
   
       
     });
+
     this.getCompany();
 
     
+  }
+  goBack() {
+    this._location.back();
   }
   
   

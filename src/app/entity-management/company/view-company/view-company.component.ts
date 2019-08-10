@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { EntityService } from 'src/app/_serives/entity.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-view-company',
@@ -9,10 +10,14 @@ import { EntityService } from 'src/app/_serives/entity.service';
 export class ViewCompanyComponent implements OnInit {
   companyList: any;
   editRecord: any;
-  constructor(private entityService: EntityService) { }
+  constructor(private entityService: EntityService,
+    private _location: Location) { }
 
   ngOnInit() {
     this.getCompany();
+  }
+  goBack() {
+    this._location.back();
   }
 
   getCompany() {

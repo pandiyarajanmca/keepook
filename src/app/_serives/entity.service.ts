@@ -12,16 +12,16 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class EntityService {
-  saveNewRoles(value: any) {
-    throw new Error("Method not implemented.");
-  }
+	saveNewRoles(value: any) {
+		throw new Error("Method not implemented.");
+	}
 	constructor(
 		private httpservice: HttpService,
 		private httpClient: HttpClient,
 		private router: Router
 	) {
 		this.env = environment;
-		this.entityPath = this.env.entityPath	;
+		this.entityPath = this.env.entityPath;
 	}
 	env: any;
 	entityPath: string;
@@ -29,17 +29,17 @@ export class EntityService {
 	serviceCreditPath: string;
 
 	saveNewCompany(data: any, headers?: any) {
-        console.log('data', data);
-        
+		console.log('data', data);
+
 		return this.httpservice
 			.post(this.entityPath + 'create-company', data, null, headers)
 			.map((res) => res);
 	}
 
-	editCompany(data: any, id: any, headers?: any) {  
-        console.log(id);
-        return this.httpservice
-			.put(this.entityPath + 'company/'+ id, data, null, headers)
+	editCompany(data: any, id: any, headers?: any) {
+		console.log(id);
+		return this.httpservice
+			.put(this.entityPath + 'company/' + id, data, null, headers)
 			.map((res) => res);
 	}
 
@@ -47,17 +47,13 @@ export class EntityService {
 		return this.httpservice
 			.get(this.entityPath + 'company')
 			.map((res) => res);
-    }
-    
-	getCompanyByID(id) {
-		return this.httpservice
-			.get(this.entityPath + 'company/' + id)
-			.map((res) => res);
 	}
 
+
+
 	saveNewOrganization(data: any, headers?: any) {
-        console.log('data', data);
-        
+		console.log('data', data);
+
 		return this.httpservice
 			.post(this.entityPath + 'create-organisation-unit', data, null, headers)
 			.map((res) => res);
@@ -71,58 +67,52 @@ export class EntityService {
 
 	getAllOrganization() {
 		return this.httpservice
-			.get(this.entityPath + 'organisation-unit' )
+			.get(this.entityPath + 'organisation-unit')
 			.map((res) => res);
 	}
 
-	submitPriceManagerContract(data: any, headers?: any) {
+	saveNewDepartment(data: any, headers?: any) {
+		console.log('data', data);
+
 		return this.httpservice
-			.post(this.entityPath + 'agreement/submit', data, null, headers)
+			.post(this.entityPath + 'create-department-unit', data, null, headers)
 			.map((res) => res);
 	}
 
-	updatePriceManagerContract(data: any, headers?: any) {
+	editDepartment(data: any, headers?: any) {
 		return this.httpservice
-			.post(this.entityPath + 'agreement/update', data, null, headers)
+			.put(this.entityPath + 'department-unit', data, null, headers)
 			.map((res) => res);
 	}
 
-	approvePriceManagerContract(data: any, headers?: any) {
+	getAllDepartment() {
 		return this.httpservice
-			.post(this.entityPath + 'agreement/approve', data, null, headers)
+			.get(this.entityPath + 'department-unit')
 			.map((res) => res);
 	}
 
-	// approveServiceCreditContract(data: any, headers?: any) {
-	// 	return this.httpservice
-	// 		.post(this.serviceCreditPath + 'agreement/approve', data, null, headers)
-	// 		.map((res) => res);
-	// }
+	saveNewUserGroup(data: any, headers?: any) {
+		console.log('data', data);
 
-
-	getDetailFromContract(id: any, headers?: any) {
 		return this.httpservice
-			.get(this.entityPath + 'agreement/' + id, null, headers)
+			.post(this.entityPath + 'create-usergroup-unit', data, null, headers)
 			.map((res) => res);
 	}
 
-	getHistoryFromContractId(id: any, headers?: any) {
+	editUserGroup(data: any, headers?: any) {
 		return this.httpservice
-			.get(this.entityPath + 'agreement/chain/' + id, null, headers)
+			.put(this.entityPath + 'usergroup-unit', data, null, headers)
 			.map((res) => res);
 	}
 
-    // getHistoryFromReportId(id: any, headers?: any) {
-    //     return this.httpservice
-    //         .get(this.serviceCreditPath + 'report/chain/' + id, null, headers)
-    //         .map((res) => res);
-    // }
-
-	getHistoryStatusFromContractId(id: any, headers?: any) {
+	getAllUserGroup() {
 		return this.httpservice
-			.get(this.entityPath + 'agreement/chain/status/' + id, null, headers)
+			.get(this.entityPath + 'usergroup-unit')
 			.map((res) => res);
 	}
+
+
+
 
 
 }

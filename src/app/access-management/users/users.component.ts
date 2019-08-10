@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { forkJoin, from } from 'rxjs';
 import { EntityService } from '../../_serives/entity.service';
 import { ViewChild } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-users',
@@ -14,11 +15,13 @@ export class UsersComponent implements OnInit {
 
   createUsersForm: FormGroup;
   submitted: boolean = false;
+  
 
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private entityService: EntityService
+    private entityService: EntityService,
+    private _location: Location
   ) { }
 
 
@@ -41,17 +44,28 @@ export class UsersComponent implements OnInit {
 
     });
 
-    this.createUsersForm.controls['full Name'].valueChanges.subscribe(val => {
-      // this.createUsersForm.controls['location'].setValidators([Validators.required]);
-      // this.createUsersForm.controls['location1'].setValidators([Validators.required]);
+    this.createUsersForm.controls['fullName'].valueChanges.subscribe(val => {
+      this.createUsersForm.controls['userName'].setValidators([Validators.required]);
+      this.createUsersForm.controls['email'].setValidators([Validators.required]);
+      this.createUsersForm.controls['contactDetails'].setValidators([Validators.required]);
+      this.createUsersForm.controls['deparment'].setValidators([Validators.required]);
+      this.createUsersForm.controls['role'].setValidators([Validators.required]);
+      this.createUsersForm.controls['password'].setValidators([Validators.required]);
+      this.createUsersForm.controls['confirmPassword'].setValidators([Validators.required]);
+      this.createUsersForm.controls['validTill'].setValidators([Validators.required]);
+      this.createUsersForm.controls['validFrom'].setValidators([Validators.required]);
 
-    });
-    // this.fileUpload1.resetFileUpload();
+   });
+    //this.fileUpload1.resetFileUpload();
   }
 
-  DocUpload(e) {
-    console.log(e);
+  goBack() {
+    this._location.back();
   }
+
+  // DocUpload(e) {
+  //   console.log(e);
+  // }
 
 
   createUsersSubmit() {
