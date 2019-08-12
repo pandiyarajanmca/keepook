@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-template-properties',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTemplatePropertiesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _location: Location) { }
 
   ngOnInit() {
   }
-
+goBack(){
+  this._location.back();
+}
 }

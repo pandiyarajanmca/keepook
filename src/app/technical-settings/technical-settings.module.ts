@@ -7,6 +7,9 @@ import { AddContractPropertiesComponent } from './add-contract-properties/add-co
 import { TechnicalSettingsComponent } from './technical-settings.component';
 import { AddDataSourceComponent } from './add-data-source/add-data-source.component';
 import { TechnicalSidebarComponent } from './technical-sidebar/technical-sidebar.component';
+import { AddPathfileSettingComponent } from './add-pathfile-setting/add-pathfile-setting.component';
+import { EditDataSourceComponent } from './edit-data-source/edit-data-source.component';
+import { ViewDataSourceComponent } from './view-data-source/view-data-source.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { TechnicalSidebarComponent } from './technical-sidebar/technical-sidebar
     AddContractPropertiesComponent,
     AddDataSourceComponent,
     TechnicalSidebarComponent,
-    TechnicalSettingsComponent],
+    TechnicalSettingsComponent,
+    AddPathfileSettingComponent,
+    EditDataSourceComponent,
+    ViewDataSourceComponent],
   imports: [
     CommonModule,
     TechnicalSettingsRoutingModule,

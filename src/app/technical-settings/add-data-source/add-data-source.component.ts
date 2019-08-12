@@ -1,6 +1,7 @@
 import { Component, OnInit, } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-data-source',
@@ -14,6 +15,7 @@ export class AddDataSourceComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
+    private _location: Location,
   ) { }
   vodafoneMarkets: Array<any> = [];
   CompanyIdExistError: boolean = false;
@@ -39,6 +41,9 @@ export class AddDataSourceComponent implements OnInit {
        
   });
 
+  }
+  goBack(){
+    this._location.back();
   }
   
   
