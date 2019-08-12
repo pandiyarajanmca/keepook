@@ -6,14 +6,17 @@ import { EntityService } from '../../_serives/entity.service';
 import { Location } from '@angular/common';
 
 
+
+
 @Component({
   selector: 'app-department',
   templateUrl: './department.component.html',
   styleUrls: ['./department.component.css']
 })
 export class DepartmentComponent implements OnInit {
-  createCompanyForm: FormGroup;
+  createDeparmentForm: FormGroup;
   submitted: boolean = false;
+  organizationList: any[] ;
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -25,19 +28,14 @@ export class DepartmentComponent implements OnInit {
 
 
   ngOnInit() {
-    this.createCompanyForm = this.formBuilder.group({
+    this.createDeparmentForm = this.formBuilder.group({
       name: ['', Validators.required],
       description: ['', Validators.required],
       organisationUnitId: ['', Validators.required],
       
     });
    
-
-    this.createCompanyForm.controls['companyName'].valueChanges.subscribe(val => {
-      // this.createCompanyForm.controls['location'].setValidators([Validators.required]);
-      // this.createCompanyForm.controls['location1'].setValidators([Validators.required]);
-
-    });
+    this.getOraganization();
 
   }
   goBack() {
@@ -45,45 +43,42 @@ export class DepartmentComponent implements OnInit {
   }
 
 
-  createCompanySubmit() {
+  createDeparmentSubmit() {
     this.submitted = true;
 
-    console.log(this.createCompanyForm.controls.value);
-    console.log(this.createCompanyForm.invalid);
+    console.log(this.createDeparmentForm.controls.value);
+    console.log(this.createDeparmentForm.invalid);
 
     // stop here if form is invalid
-    if (this.createCompanyForm.invalid) {
-      return;
-    }
+    // if (this.createDeparmentForm.invalid) {
+    //   return;
+    // }
+    this.createDeparmentForm.value['organisationUnitId'] = 1;
 
-    else {
-      this.entityService.saveNewCompany(this.createCompanyForm.value).subscribe(res => {
-        console.log(res);
-      }, err => {
-        console.log(err);
-      })
-    }
 
+    this.entityService.saveNewDepartment(this.createDeparmentForm.value, null).subscribe(res => {
+      if (res['statusCode'] == 202) {
+        console.log('success')
+      }
+    }, err => {
+
+    });
+
+
+   
     // display form values on success
-    console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.createCompanyForm.value, null, 4));
+    console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.createDeparmentForm.value, null, 4));
   }
 
-  get fConrols() { return this.createCompanyForm.controls; }
+  get fConrols() { return this.createDeparmentForm.controls; }
+  
+  getOraganization() {
+    this.entityService.getAllOrganization().subscribe(res => {
+      if (res['statusCode'] == 202) {
+        this.organizationList = res['data']['organisationUnits'];
+      }
+    }, err => {
 
-  checkCompanyIdExist() {
-    if (this.createCompanyForm.value.CompanyId) {
-      const CompanyId = this.createCompanyForm.value.CompanyId;
-      //  this.dashboardService.checkExist(CompanyId).subscribe(data => {
-      //     if (data['status']) {
-      //       this.CompanyIdExistError = true;
-      //     } else {
-      //       this.CompanyIdExistError = false;
-      //     }
-      //     console.log("Hello "+this.CompanyIdExistError);
-      //  }, err => {
-      //   // TODO need to include generic handlerror method
-      //  });
-    }
-
+    });
   }
 }

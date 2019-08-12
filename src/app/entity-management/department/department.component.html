@@ -12,7 +12,7 @@
 			<li>Add</li>
 
 		</ul>
-		<!-- <h1 class="heading">Create a New Company</h1> -->
+		<!-- <h1 class="heading">Create a New organization</h1> -->
 	</div>
 	<!--/title-->
 
@@ -31,11 +31,25 @@
 
 				<!--right_container-->
 				<div class="col-12 col-lg-9 right_container">
-					<form [formGroup]="createCompanyForm" class="inner_content row-div"
-						(ngSubmit)="createCompanySubmit()">
+					<form [formGroup]="createDeparmentForm" class="inner_content row-div"
+						(ngSubmit)="createDeparmentSubmit()">
+						<div class="form-group location_field form-group2">
+							<label class="label_field">Select the organization</label>
+							<div class="controls_field">
+								<div class="form-group lavel_1" *ngIf="organizationList?.length>0">
+									<select class="form-control" required formControlName="organisationUnitId"
+										name="organisationUnitId">
+										<option [value]=organization.id *ngFor="let organization of organizationList">
+											{{organization.organizationName}}</option>
+									</select>
+									<small *ngIf="submitted && fConrols.organisationUnitId?.errors" class="text-danger">
+										<div *ngIf="fConrols.organisationUnitId?.errors?.required">&#x26A0; Organization name
+											is required</div>
+									</small>
+								</div>
+							</div>
+						</div>
 						<div class="create_company_form global_form">
-							<h3>General</h3>
-
 							<div class="form-group name_field">
 								<label class="label_field">Department Name</label>
 								<div class="controls_field">
@@ -47,17 +61,7 @@
 									</small>
 								</div>
 							</div>
-							<div class="form-group name_field">
-								<label class="label_field">Department ID</label>
-								<div class="controls_field">
-									<input type="text" class="form-control" required name="organisationUnitId" formControlName="organisationUnitId"
-										placeholder="Enter the Department Id">
-									<small *ngIf="submitted && fConrols.name?.errors" class="text-danger">
-										<div *ngIf="fConrols.name?.errors?.required">&#x26A0; Department Id is required
-										</div>
-									</small>
-								</div>
-							</div>
+						
 							<div class="form-group adrs_field">
 								<label for="" class="label_field">Description</label>
 								<div class="controls_field">

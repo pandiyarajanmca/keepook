@@ -34,17 +34,16 @@
 					<form [formGroup]="createCompanyForm" class="inner_content row-div"
 						(ngSubmit)="createCompanySubmit()">
 						<div class="create_company_form global_form">
-							<h3>General</h3>
-							<div class="form-group location_field form-group2">
-								<label class="label_field">Select the organization</label>
+													<div class="form-group location_field form-group2">
+								<label class="label_field">Select the Company</label>
 								<div class="controls_field">
 									<div class="form-group lavel_1" *ngIf="companyList?.length>0">
 										<select class="form-control" required formControlName="companyId"
 											name="companyId">
-											<option [value]=company.Id *ngFor="let company of companyList">
+											<option [value]=company.id *ngFor="let company of companyList">
 												{{company.companyName}}</option>
 										</select>
-										<small *ngIf="submitted && fConrols.comapanyId?.errors" class="text-danger">
+										<small *ngIf="submitted && fConrols.companyId?.errors" class="text-danger">
 											<div *ngIf="fConrols.companyId?.errors?.required">&#x26A0; Organization name
 												is required</div>
 										</small>

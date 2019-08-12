@@ -75,7 +75,7 @@ export class EntityService {
 		console.log('data', data);
 
 		return this.httpservice
-			.post(this.entityPath + 'create-department-unit', data, null, headers)
+			.post(this.entityPath + 'create-department', data, null, headers)
 			.map((res) => res);
 	}
 

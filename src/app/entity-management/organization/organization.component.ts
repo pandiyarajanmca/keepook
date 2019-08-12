@@ -11,68 +11,61 @@ import { Location } from '@angular/common';
 })
 export class OrganizationComponent implements OnInit {
   createCompanyForm: FormGroup;
-  submitted: boolean= false;
+  submitted: boolean = false;
   companyList: any;
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private entityService: EntityService,
-    private _location:Location
+    private _location: Location
   ) { }
   vodafoneMarkets: Array<any> = [];
   CompanyIdExistError: boolean = false;
 
   ngOnInit() {
     this.createCompanyForm = this.formBuilder.group({
-      companyId: ['', Validators.required],
+      companyId: [null, Validators.required],
       name: ['', Validators.required],
       description: ['', Validators.required],
-  
-      
     });
 
     this.getCompany();
 
-    
+
   }
   goBack() {
     this._location.back();
   }
-  
-  
+
+
   createCompanySubmit() {
     this.submitted = true;
-   
+
     console.log(this.createCompanyForm.controls);
     console.log(this.createCompanyForm.invalid);
 
     // stop here if form is invalid
     if (this.createCompanyForm.invalid) {
-        return;
+      return;
     }
+
+    this.createCompanyForm.value['companyId'] = +this.createCompanyForm.value['companyId'];
+
+
+    this.entityService.saveNewOrganization(this.createCompanyForm.value, null).subscribe(res => {
+      if (res['statusCode'] == 202) {
+        console.log('success')
+      }
+    }, err => {
+
+    });
 
     // display form values on success
     console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.createCompanyForm.value, null, 4));
-}
-
-get fConrols() { return this.createCompanyForm.controls; }
-
-  checkCompanyIdExist() {
-   if (this.createCompanyForm.value.CompanyId) {
-     const CompanyId = this.createCompanyForm.value.CompanyId;
-    //  this.dashboardService.checkExist(CompanyId).subscribe(data => {
-    //     if (data['status']) {
-    //       this.CompanyIdExistError = true;
-    //     } else {
-    //       this.CompanyIdExistError = false;
-    //     }
-    //     console.log("Hello "+this.CompanyIdExistError);
-    //  }, err => {
-    //   // TODO need to include generic handlerror method
-    //  });
-   }
-
   }
+
+  get fConrols() { return this.createCompanyForm.controls; }
+
   getCompany() {
     this.entityService.getAllCompany().subscribe(res => {
       if (res['statusCode'] == 202) {
