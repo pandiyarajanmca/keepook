@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AngularFileUploaderModule } from "angular-file-uploader";
+
 import { TechnicalSettingsRoutingModule } from './technical-settings-routing.module';
 import { AddTemplatePropertiesComponent } from './add-template-properties/add-template-properties.component';
 import { AddContractPropertiesComponent } from './add-contract-properties/add-contract-properties.component';
@@ -25,7 +27,8 @@ import { ViewDataSourceComponent } from './view-data-source/view-data-source.com
     CommonModule,
     TechnicalSettingsRoutingModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFileUploaderModule
   ]
 })
 export class TechnicalSettingsModule { }

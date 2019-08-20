@@ -27,11 +27,11 @@
                     </div>
                     <!--right-container-->
                     <div class="col-12 col-lg-9 right_container">
-                        <div class="inner_content row-div">
-                            <div class="define_property_col">
+                        <form class="inner_content row-div template-setting">
+                            <div class="define_property_col  ">
                                 <h3>Organizational Unit</h3>
                                 <div class="emirate_select_field">
-                                    <div class="controls_field">
+                                    <div class="controls_field form-group">
                                         <select class="form-control">
                                             <option>Emirates NBD Bank</option>
                                             <option>Emirates NBD Bank</option>
@@ -96,12 +96,16 @@
                                 <div class="template_exten">
                                     <h3>Extensibility of Templates</h3>
                                     <div class="check_option">
-                                        <p>Are Created Templates Available to Other Organizations?</p>
-                                        <div class="switch_toggle">
+                                        <p>Are Created Templates Available to Other Organizations? Yes/No</p>
+                                        <!-- <div class="switch_toggle">
                                             <input type="checkbox" checked data-toggle="toggle" data-on="Yes"
                                                 data-off="No" data-size="sm">
 
-                                        </div>
+                                        </div> -->
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
                                     </div>
                                     <div class="check_option">
                                         <p>If Yes, Extensible to All</p>
@@ -127,20 +131,73 @@
                                                 </span></span>
                                         </div>
                                     </div>
-                                    <div class="storing_template">
-                                        <h3>Path for storing templates</h3>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control">
+                                    
+                                </div>
+                                <div class="global_form template_exten">
+                                    <h3>AT COMPANY LEVEL</h3>
+                                    <div class="form-group name_field">
+                                        <label class="label_field">Select Company </label>
+                                        <div class="controls_field">
+                                            <select class="form-control">
+                                                <option>Emirates NBD Group Company</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group location_field form-group2">
+                                        <label class="label_field">Store Template For a Period of</label>
+                                        <div class="controls_field form-group3">
+                                            <div class="form-group lavel_1">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group lavel_2">
+                                                <select class="form-control">
+                                                    <option>Years</option>
+                                                    <option>Months</option>
+                                                    <option>Weeks</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="global_form template_exten">
+                                        <h3>AT ORGANIZATION UNIT LEVEL</h3>
+                                        <div class="form-group name_field">
+                                            <label class="label_field">Select Company </label>
+                                            <div class="controls_field">
+                                                <select class="form-control">
+                                                    <option>Emirates NBD Group Company</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group location_field form-group2 ">
+                                            <label class="label_field">Store Template For a Period of</label>
+                                            <div class="controls_field form-group3">
+                                                <div class="form-group lavel_1">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group lavel_2">
+                                                    <select class="form-control ">
+                                                        <option>Years</option>
+                                                        <option>Months</option>
+                                                        <option>Weeks</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="storing_template">
+                                            <h3>Path for storing templates</h3>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
                             </div>
                             <div class="tfooter_btn_col">
-                                    <button type="button" class="btn btn-cancel"><i class="fa fa-close"></i> Cancel</button>
-                                    <button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
+                                <button type="button" class="btn btn-cancel"><i class="fa fa-close"></i> Cancel</button>
+                                <button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
                             </div>
 
-                        </div>
+                        </form>
                     </div>
 
                 </div>

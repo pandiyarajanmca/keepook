@@ -701,7 +701,7 @@ h1 {
 .edit_unit .custom-radio .custom-control-input:checked~.custom-control-label::after {
   background-image: none;
   content: "\f17b";
-  font-family: LineAwesome;
+  font-family: Font-Awesome;
   color: #fff;
   top: 0px;
   left: 2px;
@@ -1254,8 +1254,8 @@ table.table td {
 
 .template_exten .custom-control-label::after {
   background-size: 80% 80%;
-  left: 2px;
-  top: 3px;
+  left: -1.3rem;
+  top: .21rem;
 }
 
 .template_exten .check_option {
@@ -1867,4 +1867,85 @@ link:focus, .nav-tabs .nav-link:hover {
 }
 .page-item.disabled .page-link {
    border-color: #f7f7f7;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.template-setting .custom-control-input {
+  z-index: 1;
+  left: 3px;
+  top: 3px;
+  cursor: pointer;
+  
+}
+.global_form .form-group3 {
+  
+  width: 34%;
+ 
+}
+.template_table1 {
+  max-width: 1100px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+ .table_input {
+  float: left;
+  width: 68%;
+  margin-left: 55px;
+  
 }

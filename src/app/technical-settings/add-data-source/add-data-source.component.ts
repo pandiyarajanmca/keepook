@@ -12,6 +12,8 @@ export class AddDataSourceComponent implements OnInit {
 
   createCompanyForm: FormGroup;
   submitted: boolean= false;
+  afuConfig: any;
+  token:String;
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -40,6 +42,19 @@ export class AddDataSourceComponent implements OnInit {
         // this.createCompanyForm.controls['location1'].setValidators([Validators.required]);
        
   });
+  this.token = sessionStorage.getItem('token') ? JSON.parse(sessionStorage.getItem('token')): null;
+     console.log(this.token);
+
+  this.afuConfig ={
+    theme:'attachPin',
+   uploadAPI: {
+     url:"http://23.96.4.235:9094/api/media/uploadFile",
+     headers: {
+       // "Content-Type" : "application/json;charset=UTF-8",
+       "Authorization" : 'Bearer ' + this.token
+        }
+   }
+ };
 
   }
   goBack(){
