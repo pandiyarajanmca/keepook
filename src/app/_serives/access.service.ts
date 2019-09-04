@@ -34,20 +34,20 @@ export class AccessService {
 		console.log('data', data);
 
 		return this.httpservice
-			.post(this.accessPath + 'create-role', data, null, headers)
+			.post(this.accessPath + 'create-business-role', data, null, headers)
 			.map((res) => res);
 	}
 
 	editRoles(data: any, id: any, headers?: any) {
 		console.log(id);
 		return this.httpservice
-			.put(this.accessPath + 'role/' + id, data, null, headers)
+			.put(this.accessPath + 'business-role/' + id, data, null, headers)
 			.map((res) => res);
 	}
 
 	getAllRoles() {
 		return this.httpservice
-			.get(this.accessPath + 'role')
+			.get(this.accessPath + 'business-role')
 			.map((res) => res);
 	}
 

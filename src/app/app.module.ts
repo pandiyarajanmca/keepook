@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpService} from './_serives/http.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AccessService } from './_serives/access.service';
 
 @NgModule({
   declarations: [

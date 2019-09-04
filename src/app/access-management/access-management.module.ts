@@ -11,6 +11,7 @@ import { UsersComponent } from './users/users.component';
 import { ViewUsersComponent } from './users/view-users/view-users.component';
 import { EditUsersComponent } from './users/edit-users/edit-users.component';
 import { AssignRolesComponent } from './users/assign-roles/assign-roles.component';
+import { AccessService } from '../_serives/access.service';
 
 
 
@@ -27,12 +28,16 @@ import { AssignRolesComponent } from './users/assign-roles/assign-roles.componen
     EditUsersComponent,
     ViewUsersComponent,
     AssignRolesComponent
-],
+  ],
   imports: [
     CommonModule,
     AccessRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+
+  ],
+  providers: [
+    AccessService
   ]
 })
 export class AccessManagementModule { }

@@ -5,10 +5,16 @@
 export const environment = {
   production: false,
   userServiceBaseUrl: 'http://23.96.4.235:9094/api/auth/',
- 
+
   entityPath: "http://23.96.4.235:9094/api/entity/",
-  
+  accessPath: "http://23.96.4.235:9094/api/access-management/",
+  technicalPath: "http://23.96.4.235:9094/api/technical-settings/",
+  workflowPath: "http://23.96.4.235:9094/api/entity/"
+
+
+
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

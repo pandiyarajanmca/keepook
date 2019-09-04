@@ -33,9 +33,9 @@ export class RolesComponent implements OnInit {
     console.log(this.token);
 
     this.createRolesForm = this.formBuilder.group({
-      companyName: ['', Validators.required],
+      roleName: ['', Validators.required],
       website: ['', Validators.required],
-      logo: ['', Validators.required],
+      
       address: ['', Validators.required],
       city: ['', Validators.required],
       zipCode: ['', Validators.required],

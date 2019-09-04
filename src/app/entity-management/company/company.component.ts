@@ -13,11 +13,11 @@ import { Location } from '@angular/common';
   styleUrls: ['./company.component.css']
 })
 export class CompanyComponent implements OnInit {
-  
+
   createCompanyForm: FormGroup;
   submitted: boolean = false;
   token: string;
-  afuConfig : any;
+  afuConfig: any;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -30,17 +30,17 @@ export class CompanyComponent implements OnInit {
 
 
   ngOnInit() {
-     this.token = sessionStorage.getItem('token') ? JSON.parse(sessionStorage.getItem('token')): null;
-     console.log(this.token);
-     
-     this.afuConfig ={
-       theme:'attachPin',
+    this.token = sessionStorage.getItem('token') ? JSON.parse(sessionStorage.getItem('token')) : null;
+    console.log(this.token);
+
+    this.afuConfig = {
+      theme: 'attachPin',
       uploadAPI: {
-        url:"http://23.96.4.235:9094/api/media/uploadFile",
+        url: "http://23.96.4.235:9094/api/media/uploadFile",
         headers: {
           // "Content-Type" : "application/json;charset=UTF-8",
-          "Authorization" : 'Bearer ' + this.token
-           }
+          "Authorization": 'Bearer ' + this.token
+        }
       }
     };
     this.createCompanyForm = this.formBuilder.group({
@@ -50,7 +50,7 @@ export class CompanyComponent implements OnInit {
       address: ['', Validators.required],
       city: ['', Validators.required],
       zipCode: ['', Validators.required],
-      country: ['', Validators.required],
+      country: ['', null],
       phoneNumber: ['', Validators.required],
       contactPerson: ['', Validators.required],
     });
@@ -64,7 +64,7 @@ export class CompanyComponent implements OnInit {
   }
 
   DocUpload(e) {
-    console.log(e);    
+    console.log(e);
   }
 
   goBack() {
@@ -78,10 +78,10 @@ export class CompanyComponent implements OnInit {
     if (this.createCompanyForm.invalid) {
       return;
     }
-   
+
     else {
       console.log(this.createCompanyForm.value);
-      
+
       this.entityService.saveNewCompany(this.createCompanyForm.value).subscribe(res => {
         console.log(res);
       }, err => {

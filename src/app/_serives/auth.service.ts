@@ -29,15 +29,14 @@ export class AuthService {
         sessionStorage.setItem('token', JSON.stringify(response.data.jwt));
 
         if (response.data && response.data['user']) {
-                 
+
           sessionStorage.setItem('user', JSON.stringify(response.data['user'].firstName));
           this.getLoggedInName.emit(response.data['user'].firstName + ' ' + response.data['user'].lastName);
-          if(this.isAuthenticated())
-          {
+          if (this.isAuthenticated()) {
             this.router.navigate(['/dashboard']);
-            this.loggedIn.next(true);     
+            this.loggedIn.next(true);
           }
-           
+
         }
       }
       return response;
@@ -49,12 +48,12 @@ export class AuthService {
   get isLoggedIn() {
 
     console.log(this.isAuthenticated);
-    
-    if(this.isAuthenticated())
-    {
-     
-      this.loggedIn.next(true);     
-    }
+
+    // if(this.isAuthenticated())
+    // {
+
+    this.loggedIn.next(true);
+    // }
 
     return this.loggedIn.asObservable();
   }
